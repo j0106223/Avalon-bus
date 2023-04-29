@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct component{
+    int role;//master or slave
+    char *name;
     char *slave_name;
-    int source[20];//is a master stack
+    master source[20];//is a master stack
 }slave;
 slave create_slave();
 void connector(slave);
