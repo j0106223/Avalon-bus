@@ -30,11 +30,18 @@ parameter DW = 32;
         write = 0;
         waitrequest = 1;
     end
+    integer i;
+    integer trans_cnt;
+    integer SEED = 87;
     initial begin
-        m_write(10,20);
-        m_read(5);
-        m_write(15,25);
-        m_read(8);
+        trans_cnt = $random(SEED)%20 + 32'd20;
+        for(i = 0; i < trans_cnt; i = i + 1)begin
+            if($random(SEED) % 2)begin
+                m_read($random(SEED));
+            end else begin
+                m_write($random(SEED),$random(SEED));
+            end
+        end
         $finish;
     end
 
