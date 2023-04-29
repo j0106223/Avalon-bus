@@ -1,0 +1,5 @@
+nios2 -> I2C
+nios2 -> SPI
+
+picorv32 -> I2C
+picorv32 -> VGA
