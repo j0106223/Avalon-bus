@@ -40,7 +40,7 @@ parameter DW = 32;
         end
         $finish;
     end
-    isTriangle DUT(
+    isTriangle DUT_avalon_slave(
         .clk        (clk),
         .reset_n    (reset_n),
         .address    (address),
