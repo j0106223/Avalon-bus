@@ -2,17 +2,15 @@
 #include <stdlib.h>
 //global clock reset
 
-char *clk_name = "clk";
-char *reset_name = "reset_n";
+
 
 typedef struct component{
-    int role;//master or slave
-    char *ip_name;
-    char *inst_name;
-    int slave_
-    char *slave_name;
-    master source[20];//is a master stack
-}slave;
+    char* name;//component name
+    int slave_amount;
+    int master_amount;
+    char* slave_name[10];
+    char* master_name[10];
+}component;
 slave create_slave();
 void connector(slave);
 int main(void){
@@ -22,12 +20,24 @@ int main(void){
         printf("soc.arch file doesn't exist\n");
         exit(1);
     }
+    char *clk_name = "clk";
+    char *reset_name = "reset_n";
+
     return 0;
 }
 void inst_RTL(){
-    printf("%s");
+    
     //ip name
+    printf("%s");
     //component name
-
-
+    printf("%s");
+    //component wire
+    printf("{");
+    printf(".address(%s_address),\n");
+    printf(".read(%s_read),\n");
+    printf(".write(%s_write),\n");
+    printf(".readdata(%s_readdata),\n");
+    printf(".writedata(%s_writedata),\n");
+    printf(".waitrequest(%s_waitrequest)\n");
+    printf("};");
 }
