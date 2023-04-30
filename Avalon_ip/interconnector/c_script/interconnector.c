@@ -1,8 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+//global clock reset
+
+char *clk_name = "clk";
+char *reset_name = "reset_n";
+
 typedef struct component{
     int role;//master or slave
-    char *name;
+    char *ip_name;
+    char *inst_name;
+    int slave_
     char *slave_name;
     master source[20];//is a master stack
 }slave;
@@ -16,4 +23,11 @@ int main(void){
         exit(1);
     }
     return 0;
+}
+void inst_RTL(){
+    printf("%s");
+    //ip name
+    //component name
+
+
 }
