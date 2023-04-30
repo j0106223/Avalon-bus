@@ -5,13 +5,14 @@
 
 
 typedef struct component{
+    char* ip;
     char* name;//component name
     int slave_amount;
     int master_amount;
     char* slave_name[10];
     char* master_name[10];
 }component;
-slave create_slave();
+//slave create_slave();
 void connector(slave);
 int main(void){
     FILE *fp;
@@ -22,16 +23,23 @@ int main(void){
     }
     char *clk_name = "clk";
     char *reset_name = "reset_n";
+    component temp;
 
     return 0;
 }
-void inst_RTL(){
+void inst_RTL(component *inst){
     
     //ip name
-    printf("%s");
-    //component name
-    printf("%s");
-    //component wire
+    printf("%s ", inst->ip);
+    //component instance name
+    printf("%s", inst->name);
+    //component master 
+    for(int i = 0; i < inst->master_amount;i++){
+        
+    }
+    for(int i = 0; i < inst->slave_amount; i++){
+
+    }
     printf("{");
     printf(".address(%s_address),\n");
     printf(".read(%s_read),\n");
