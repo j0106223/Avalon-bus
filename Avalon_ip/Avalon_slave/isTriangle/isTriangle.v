@@ -10,14 +10,14 @@ module isTriangle (
     readdata
 );
     parameter pipeline_enable = 0;
-    input clk;
-    input reset_n;
-    input [1:0]address;
-    input read;
-    input write;
-    input [31:0]writedata;
-    output reg waitrequest;
-    output reg [31:0]readdata;
+    input   clk;
+    input   reset_n;
+    input       [1:0] address;
+    input             read;
+    input             write;
+    input      [31:0] writedata;
+    output reg        waitrequest;
+    output reg [31:0] readdata;
     
     //Avalon slave interface
 
@@ -65,7 +65,7 @@ module isTriangle (
                             wait_cnt <= 0;
                             waitrequest <= 1'b0;
                         end else begin
-                            wait_cnt <= wait_cnt +1;
+                            wait_cnt <= wait_cnt + 1'b1;
                             waitrequest <= 1'b1;
                         end
                     end else if(read | write)begin
