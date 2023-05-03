@@ -81,7 +81,7 @@ module isTriangle (
                     waitrequest <= 1'b1;
                 end else begin
                     if(read | write)begin
-                        waitrequest = 1'b0;
+                        waitrequest <= 1'b0;
                     end else begin
                         waitrequest <= 1'b1;
                     end
