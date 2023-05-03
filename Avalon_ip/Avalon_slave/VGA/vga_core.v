@@ -1,8 +1,9 @@
 module vag_core (
     clk,
-    pixel
-    r
-    g
+    
+    pixel,
+    r,
+    g,
     b
 );
     parameter COLOR_DEPTH = 4;
