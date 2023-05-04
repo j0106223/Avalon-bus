@@ -3,3 +3,7 @@ nios2 -> SPI
 
 picorv32 -> I2C
 picorv32 -> VGA
+
+ip_name master_component_name.interface -> slave_component_name.interface
+example:
+nios2 nios2_cpu.m0 -> i2c.s0

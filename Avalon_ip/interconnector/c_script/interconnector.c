@@ -49,3 +49,9 @@ void inst_RTL(component *inst){
     printf(".waitrequest(%s_waitrequest)\n");
     printf("};");
 }
+
+void instantiate_avalon(char* module_name, char* inst_name){
+    printf("\n%s %s", module_name, inst_name);
+    printf("{\n");
+    
+}
