@@ -27,7 +27,7 @@ int main(void){
 
     return 0;
 }
-void inst_RTL(component *inst){
+void inst_module(component *inst){
     
     //ip name
     printf("%s ", inst->ip);

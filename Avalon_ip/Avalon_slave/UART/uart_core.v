@@ -1,6 +1,14 @@
 `default_nettype none
 module uart_core (
-    
+    clk,
+    reset_n,
+    rx_ready,
+    rx_data,
+    tx_valid,
+    tx_ready,
+    tx_data,
+    rx,
+    tx
 );
     input clk;
     input reset_n;
@@ -32,8 +40,13 @@ module uart_core (
 
 //========================tx=====================================
     assign tx = ;
+    reg tx_q;
     always @(posedge clk or negedge reset_n) begin
-        
+        if(!reset_n)begin
+            tx_q <= 0;
+        end else begin
+            
+        end
     end
 //========================tx=====================================
 
