@@ -1,0 +1,4 @@
+This foler will put some reusable module for master or slave design
+
+if you can not find module define in related IP folder,
+it may exist in this HDL_Library folder.
