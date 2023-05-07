@@ -6,7 +6,9 @@ module synchronizer(
     out
 );
 //instance example :
-//synchronizer (.clk(clk), reset_n(reset_n), in(), out());    
+/*
+synchronizer (.clk(clk), reset_n(reset_n), in(), out());
+*/    
     input  clk;
     input  reset_n;
     input  in;

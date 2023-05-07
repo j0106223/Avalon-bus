@@ -2,7 +2,8 @@
 module rv32_5stage (
     address,
     data,
-
+    instruction,
+    
 );
     output address;
     //instruction master

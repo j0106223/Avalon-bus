@@ -7,6 +7,7 @@ module uart_core (
     tx_valid,
     tx_ready,
     tx_data,
+    clk_div,
     rx,
     tx
 );
@@ -19,6 +20,8 @@ module uart_core (
     input  tx_valid;
     output tx_ready;
     input [7:0]tx_data;
+
+    input clk_div; 
     //IO
     input  rx;
     output tx;
