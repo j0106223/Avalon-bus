@@ -16,4 +16,34 @@ module avs_i2c (
     output avs_s0_waitrequest;
     output [31:0]avs_s0_readdata;
     input [31:0]avs_s0_writedata;
+//==================register map begin======================
+
+//==================register map end========================
+    //write register
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+
+        end else begin
+            if(avs_s0_write)begin
+                case (avs_s0_address)
+                    0:
+                    0:
+                    0:
+                    0: 
+                    default:begin
+                    end 
+                endcase
+            end
+        end
+    end
+
+    always @(*) begin
+        if(avs_s0_read)begin
+            case (avs_s0_address)
+                : 
+                default:begin
+                end
+            endcase
+        end
+    end
 endmodule

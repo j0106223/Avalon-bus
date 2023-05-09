@@ -1,7 +1,5 @@
-module clk_gen
-#(
-    parameter ADJUST_DUTY_CYCLE_EN = 0
-)(
+//if you want to adjust duty cycle please use pwm module
+module clk_gen(
     clk_i,
     reset_n,
     clk_div,
@@ -12,14 +10,6 @@ module clk_gen
     //let software decide clk_div value to reach the target freq
     input [31:0]clk_div;
     output      clk_o;
-
-    generate
-        if(ADJUST_DUTY_CYCLE_EN)begin
-           //pwm 
-        end else begin
-           //50-50
-        end
-    endgenerate
     reg [31:0]cnt;
     reg clk_q;
     assign clk_o = clk_q;
