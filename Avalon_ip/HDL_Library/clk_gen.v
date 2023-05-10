@@ -18,7 +18,7 @@ module clk_gen(
             cnt   <= 0;
             clk_q <= 0;
         end else begin
-            if(cnt > clk_div)begin
+            if(cnt >= clk_div)begin
                 clk_q <= ~clk_q;
                 cnt <= 0;
             end else begin
