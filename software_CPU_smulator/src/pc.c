@@ -1,7 +1,5 @@
-struct pc{
-    int cnt;
-};
-void init_pc(struct pc *pc_inst, int start_addr){
+#include "../inc/pc.h"
+void pc_init(struct pc *pc_inst, int start_addr){
     pc_inst->cnt = start_addr;
 }
 
@@ -12,7 +10,7 @@ int get_pc(struct pc *pc_inst){
 void set_pc(struct pc *pc_inst, int next_pc){
     pc_inst->cnt = next_pc;
 }
-void inc_pc_4byte(struct pc *pc_inst){
+void pc_inc_4byte(struct pc *pc_inst){
     set_pc(pc_inst, get_pc(pc_inst) + 4);
 }
 

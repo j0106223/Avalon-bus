@@ -1,1 +1,4 @@
 
+struct pc{
+    int cnt;
+};

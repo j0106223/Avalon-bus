@@ -1,3 +1,0 @@
-struct rv32cpu{
-    
-};

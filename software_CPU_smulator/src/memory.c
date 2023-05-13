@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "../inc/memory.h"
 struct memory{
     int *data;
     int base;
@@ -15,13 +16,8 @@ int mem_init(struct memory *mem_inst, int base_addr, int byte_size){
 
 int read_mem(struct memory *mem_inst, int addr){
     //out off memory address space
-    mem_inst->data[addr] = 10;
+    return mem_inst->data[addr];
 }
-void write_mem(){
-
-}
-mem_chip_select
-
-int overlap_check(){
-    
+void write_mem(struct memory *mem_inst, int addr, int data){
+    mem_inst->data[addr] = data;
 }

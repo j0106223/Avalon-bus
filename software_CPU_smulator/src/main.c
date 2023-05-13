@@ -7,5 +7,7 @@ int main(void){
     //data memory
     //initial instruction memory
     //instantiate cpu :rv32cpu cpu0;
+    struct rv32cpu cpu_inst;
+    cpu_init(&cpu_inst);
     return 0;
 }
