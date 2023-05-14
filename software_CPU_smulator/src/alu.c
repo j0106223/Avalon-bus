@@ -1,10 +1,28 @@
 #include "../inc/alu.h"
 
-int alu_decode(struct alu alu_inst){
-
+int alu_decode(struct alu *alu_inst, int alu_opcode){
+    switch (alu_opcode){
+    case 0:alu_inst->result = alu_add(alu_inst->a,alu_inst->b); break;
+    case 1:
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    case 6:
+        break;
+    case 7:
+        break;
+    default:
+        break;
+    }
 }
-int alu_add(struct alu *alu_inst){
-    return alu_inst->a + alu_inst->b;
+int alu_add(int a, int b){
+    return a + b;
 }
 int alu_sub(struct alu *alu_inst){
     return alu_inst->a - alu_inst->b;

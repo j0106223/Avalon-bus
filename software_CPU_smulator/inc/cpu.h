@@ -3,7 +3,7 @@
 #include "regfile.h"
 #include "cpu_config.h"
 #include "alu.h"
-
+#include "decoder.h"
 
 
 struct cpu{
@@ -12,5 +12,5 @@ struct cpu{
     struct memory ram;//for data
     struct regfile regfile;
     struct pc pc;
-        
+    struct decoder decoder;
 };

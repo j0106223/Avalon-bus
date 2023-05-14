@@ -1,9 +1,6 @@
 #include <stdlib.h>
 #include "../inc/memory.h"
-struct memory{
-    int *data;
-    int base;
-};
+
 int mem_init(struct memory *mem_inst, int base_addr, int byte_size){
     mem_inst->base = base_addr;
     if(byte_size % 4 != 0){
