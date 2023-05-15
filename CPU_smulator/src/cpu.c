@@ -7,12 +7,13 @@ void cpu_init(struct cpu *cpu_inst){
     pc_init();
     regfile_init();
 }
-void run(struct cpu *cpu_inst){
+void cpu_run(struct cpu *cpu_inst){
+    int instr;
     while(1){
         //fetch
-        read_mem(cpu_inst->rom, cpu_inst->pc.cnt);
+        instr = read_mem(cpu_inst->rom, cpu_inst->pc.cnt);
         //decode
-        instruction_decode(cpu_inst->decoder,);
+        instruction_decode(cpu_inst->decoder, instr);
         cpu_inst->decoder.alu_opcode;
         cpu_inst->decoder.opcode;
         cpu_inst->decoder.ra1;
