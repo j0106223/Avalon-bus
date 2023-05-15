@@ -9,5 +9,6 @@ int main(void){
     //instantiate cpu :rv32cpu cpu0;
     struct cpu cpu_inst;
     cpu_init(&cpu_inst);
+    cpu_run(&cpu_inst);
     return 0;
 }
