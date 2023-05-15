@@ -15,6 +15,7 @@ module i2c_core (
     input reset_n;
     input  [7:0] rdata_i;
     output [7:0] wdata_o;
+    input [31:0]clk_div;
     input sda_i;
     input scl_i;
     output sda_o;
