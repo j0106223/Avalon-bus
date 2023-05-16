@@ -3,5 +3,6 @@
 struct memory{
     int *data;
     int base;
+    int size;
 };
 #endif

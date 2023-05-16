@@ -9,11 +9,11 @@
 #include "control.h"
 
 struct cpu{
-    struct alu alu;
-    struct memory rom;//for instruction
-    struct memory ram;//for data
+    struct alu     alu;
+    struct memory  rom;//for instruction
+    struct memory  ram;//for data
     struct regfile regfile;
-    struct pc pc;
+    struct pc      pc;
     struct decoder decoder;
     struct control control;
 };
