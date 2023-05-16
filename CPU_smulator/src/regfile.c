@@ -1,16 +1,25 @@
 #include "../inc/regfile.h"
 #include <stdio.h>
 
-void write_regfile(struct regfile *regfile_inst, int reg_index, int data){
-    if(reg_index > 32){
-        printf("%d is over register amount",reg_index);
-        return;
+int read_reg(struct regfile *regfile_inst, int index){
+    if(index > REG_NUM){
+        printf("register file access fail...\n");
+        printf("wrong register index");
+        exit(1);
     }
-    regfile_inst->x[reg_index] = data;
-}  
-int read_regfile(struct regfile *regfile_inst, int reg_index){
-    return regfile_inst->x[reg_index];
+    return regfile_inst->x[index];
+}
+void write_reg(struct regfile *regfile_inst, int index, int data){
+    if(index > REG_NUM){
+        printf("register file access fail...\n");
+        printf("wrong register index");
+        exit(1);
+    }
+    regfile_inst->x[index] = data;
 }
 void regfile_init(struct regfile *regfile_inst){
-    
+    int i;
+    for(i = 0; i < REG_NUM; i++){
+        regfile_inst->x[i] = 0;
+    }
 }
