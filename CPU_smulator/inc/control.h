@@ -1,3 +1,5 @@
+#ifndef _CONTROL_HEADER_
+#define _CONTROL_HEADER_
 struct control
 {
     int ALUSrc;
@@ -9,5 +11,6 @@ struct control
     int ALUOp1;//for alu
     int ALUOp0;//for branch
 };
+#endif
 
 

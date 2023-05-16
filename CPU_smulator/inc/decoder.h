@@ -1,3 +1,5 @@
+#ifndef _DECODER_HEADER_
+#define _DECODER_HEADER_
 struct decoder{
     int opcode;
     int ra1;
@@ -5,3 +7,4 @@ struct decoder{
     int wa;
     int alu_opcode;
 };
+#endif

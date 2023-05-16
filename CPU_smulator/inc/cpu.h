@@ -1,3 +1,5 @@
+#ifndef _CPU_HEADER_
+#define _CPU_HEADER_
 #include "pc.h"
 #include "memory.h"
 #include "regfile.h"
@@ -14,3 +16,4 @@ struct cpu{
     struct pc pc;
     struct decoder decoder;
 };
+#endif
