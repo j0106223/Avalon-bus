@@ -9,23 +9,35 @@ void cpu_init(struct cpu *cpu_inst){
 }
 void cpu_run(struct cpu *cpu_inst){
     int instr;
+    int rd1;
+    int rd2;
+    int ram_rdata;
     while(1){
         //fetch
         instr = read_mem(&cpu_inst->rom, cpu_inst->pc.cnt);
         //decode
         instruction_decode(&cpu_inst->decoder, instr);
         control_decode(&cpu_inst->control, cpu_inst->decoder.opcode);
+        rd1 = read_reg(&cpu_inst->regfile, cpu_inst->decoder.ra1);
+        rd2 = read_reg(&cpu_inst->regfile, cpu_inst->decoder.ra2);
+        if(cpu_inst->control.ALUSrc){
+                
+        } else {
+            
+        }
         if(cpu_inst->control.MemRead){
-            read_mem(&cpu_inst->ram, ){
+            ram_rdata = read_mem(&cpu_inst->ram, cpu_inst->alu.result);
         }
         if(cpu_inst->control.MemWrite){
-            write_mem(&cpu_inst->ram, ,){
+            write_mem(&cpu_inst->ram, cpu_inst->alu.result, rd2);
         }
         if(cpu_inst->control.RegWrite){
-            write_reg(cpu_inst-, int index, int data)
+            if(cpu_inst->control.MemtoReg){
+                write_reg(&cpu_inst->regfile, cpu_inst->decoder.wa, ram_rdata);
+            }else {
+                write_reg(&cpu_inst->regfile, cpu_inst->decoder.wa, cpu_inst->alu.result);
+            }
         }
-        if(cpu_inst->control.ALUSrc){
-
-        }
+        
     }
 }
