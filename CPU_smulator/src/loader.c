@@ -3,17 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../inc/cpu.h"
-void hex2mem(char *file_name, struct memory *rom,struct memory *ram){
+void ihex2mem(char *file_name, struct memory *rom,struct memory *ram){
     FILE *fp;
     int start_addr;
     int end_addr;
     char line_text[50];
     fp = fopen(file_name, "r");
-    int type;
+    int ;
     while(fscanf(fp, "%s", line_text) != EOF){
         switch(line_text[7]){//record type
             case '0'://data
-                ;
+                
                 break;
             case '1'://eof
                 ;
@@ -33,6 +33,13 @@ void hex2mem(char *file_name, struct memory *rom,struct memory *ram){
         }
     }
     fclose(fp);
+}
+int hex2int(char *){
+    int result = 0;;
+    while(){
+
+    }
+    return 
 }
 void txt2mem(char *file_name, struct memory *rom){
     FILE *fp;

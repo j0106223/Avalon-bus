@@ -7,6 +7,7 @@
 #include "alu.h"
 #include "decoder.h"
 #include "control.h"
+#include "debug.h"
 
 struct cpu{
     struct alu     alu;
