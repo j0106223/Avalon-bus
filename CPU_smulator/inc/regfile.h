@@ -4,7 +4,7 @@
 struct regfile{
     int x[REG_NUM];//need parameterize
 };
-char regABI_NAME[][5] = {
+char reg_name[][5] = {
     "zero",
     "ra",
     "sp",
