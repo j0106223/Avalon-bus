@@ -9,14 +9,21 @@ void ihex2mem(char *file_name, struct memory *rom,struct memory *ram){
     int end_addr;
     char line_text[50];
     fp = fopen(file_name, "r");
-    int ;
+    int load_addr_h;
+    int load_addr_l;
+    int load_addr_offset;
+    int load_addr;
+    int i;
+    char byte_cnt[2];
     while(fscanf(fp, "%s", line_text) != EOF){
+        
         switch(line_text[7]){//record type
             case '0'://data
-                
+                for(i = 0; i < ; i++){
+
+                }      
                 break;
             case '1'://eof
-                ;
                 break;
             case '2'://Extended Segment Address
                 ;
