@@ -49,9 +49,9 @@ void txt2mem(char *file_name, struct memory *rom){
         rom->data[i] = data;//little endian check
     }
 }
-int check_memory_region(int load_addr, struct memory *mem){
-    if((addr < mem->base) || (addr > (mem->base + mem->size))){
-        return 0;
+int check_memory_region(int load_addr, int load_bytes, struct memory *mem){
+    if(load_addr >= mem->base && (load_addr + load_bytes) <= mem->base + mem->size){
+        return 1;//hit
     }
-    return 1;
+    return 0;//fail
 }
