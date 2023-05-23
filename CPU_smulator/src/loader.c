@@ -14,11 +14,12 @@ void ihex2mem(char *file_name, struct memory *rom,struct memory *ram){
     int load_addr_offset;
     int load_addr;
     int i;
-    char byte_cnt[2];
+    char byte_cnt[3];
     while(fscanf(fp, "%s", line_text) != EOF){
         
         switch(line_text[7]){//record type
             case '0'://data
+
                 for(i = 0; i < ; i++){
 
                 }      
