@@ -11,7 +11,7 @@ module clk_gen(
     input [31:0]clk_div;
     output      clk_o;
     reg [31:0]cnt;
-    reg clk_q;
+    reg       clk_q;
     assign clk_o = clk_q;
     always @(posedge clk_i or negedge reset_n) begin
         if(!reset_n)begin
