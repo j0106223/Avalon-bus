@@ -1,0 +1,9 @@
+= Degital IC Design Tutorial
+
+== setup Icaruse verilog and Gtkwave
+
+in this tutorial we use Icarus verilog or a little bit modelsim
+and use gtkwave to show the waveform of the design
+****
+
+****
