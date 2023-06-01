@@ -1,0 +1,12 @@
+this is a media player project based on Intel DE2-115 FPGA and use NiosII softcore
+
+in this project we will make a media player which can play song and show some control pannel on VGA screen and also controlled by buttons and switches, maybe it will add the ps/2 mouse keyboard function as well
+Anyways I will use each peripherals if I can.
+
+I2S:sound
+VGA:
+PS/2
+PIO
+
+nios2->risc-v
+bare-metal -> rtos
