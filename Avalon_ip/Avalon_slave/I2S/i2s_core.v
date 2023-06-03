@@ -1,5 +1,4 @@
 module i2s_core (
-    clk,
     reset_n,
     data_right,
     data_left,
@@ -8,11 +7,10 @@ module i2s_core (
     ws
 );
     parameter      DW = 8;
-    input          clk;
     input          reset_n;
     input [DW-1:0] data_right;//right channel
     input [DW-1:0] data_left;//left channel
-    output         sck;
+    input          sck;
     output         sd;//one way transaction
     output         ws;//left right channel
 
