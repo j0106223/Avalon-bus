@@ -1,7 +1,8 @@
 module dcfifo(
     
 );
-    parameter WIDTH = 32;
+    parameter W_WIDTH = 32;
+    parameter R_WIDTH = 32;
     parameter DEPTH = 32;
     input wclk;
     input rclk;
@@ -14,11 +15,12 @@ module dcfifo(
     output rdata;
     output full;
     output empty;
-    output 
-    reg [WIDTH-1:0] data [0:DEPTH-1];
-    reg widx;
-    reg ridx;
+    reg [W_WIDTH-1:0] data [0:DEPTH-1];
+    reg [$clog2(W_WIDTH)-1:0]widx;
+    reg []ridx;
     integer i;
+    assign full = ;
+    assign empty = ;
     always @(posedge wclk or negedge reset_n) begin
         if(!reset_n)begin//just init idx pointer 
             
