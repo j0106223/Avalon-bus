@@ -22,6 +22,12 @@ module i2c_core (
     input scl_i;
     output sda_o;
     output scl_o;
+    output ready;
+    output valid;
+    output done;
+
+    reg sda;
+    reg scl;
     //start
     //rdata
     //wdata
@@ -33,11 +39,12 @@ module i2c_core (
         .clk_o      (i2c_clk)
     );
 //========================FSM===============================================
-    localparam IDLE ;
-    localparam START ;
-    localparam RDATA ;
-    localparam WDATA ;
-    localparam STOP ;
+    localparam IDLE  = 0;
+    localparam START = 0;
+    localparam RDATA = 0;
+    localparam WDATA = 0;
+    localparam STOP  = 0;
+    localparam DONE = 0;
     reg [3:0]state;
     reg [3:0]next_state;
     always @(posedge clk or negedge reset_n) begin
@@ -50,19 +57,35 @@ module i2c_core (
 
     always @(*) begin
         case(state)
-            IDLE :;
-            START:;
-            RDATA:;
-            WDATA:;
-            STOP :;
+            IDLE :begin
+                next_state = ;
+            end
+            START:begin
+                next_state = ;
+            end
+            RDATA:begin
+                next_state = ;
+            end
+            WDATA:begin
+                next_state = ;
+            end
+            STOP:begin
+                next_state = ;
+            end
+            DONE:begin
+                
+            end
             default;
         endcase
     end
+
+    //output logic
+
 //========================FSM===============================================
 
     always @(posedge clk or negedge reset_n) begin
         if(!reset_n)begin
-
+            sda <= 1'b1;
         end else begin
 
         end
