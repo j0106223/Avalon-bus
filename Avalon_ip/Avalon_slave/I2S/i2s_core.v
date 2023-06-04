@@ -1,18 +1,19 @@
 module i2s_core (
     reset_n,
+    sck,
+    ws,
     data_right,
     data_left,
-    sck,
-    sd,
-    ws
+    sd
 );
     parameter      DW = 8;
+    localparam     MSB = DW - 1;
     input          reset_n;
+    input          sck;
+    input          ws;//left right channel
     input [DW-1:0] data_right;//right channel
     input [DW-1:0] data_left;//left channel
-    input          sck;
     output         sd;//one way transaction
-    output         ws;//left right channel
 
     //======detect left right channel change========
     reg ws_d1;
@@ -32,8 +33,8 @@ module i2s_core (
 
     //======shift register ========
 
-    wire load_data = (ws_d1) ? data_right : data_left;
-    reg [DW-1:0]data_sr;
+    wire [DW-1:0]load_data = (ws_d1) ? data_right : data_left;
+    reg  [DW-1:0]data_sr;
     always @(posedge sck or negedge reset_n) begin
         if(!reset_n)begin
             data_sr <= 0;
@@ -45,5 +46,6 @@ module i2s_core (
             end
         end
     end
+    assign sd = data_sr[MSB];
     //======shift register ========
 endmodule
