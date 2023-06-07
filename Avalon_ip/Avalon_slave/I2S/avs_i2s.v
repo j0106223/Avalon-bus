@@ -44,9 +44,9 @@ reg [31:0]status;
             if(avs_s0_write)begin
                 case (avs_s0_address)
                     0: data    <= avs_s0_writedata;
-                    0: control <= avs_s0_writedata;
-                    0: status  <= avs_s0_writedata;
-                    0: clk_div <= avs_s0_writedata;
+                    1: control <= avs_s0_writedata;
+                    2: status  <= avs_s0_writedata;
+                    3: clk_div <= avs_s0_writedata;
                 endcase
             end
         end
