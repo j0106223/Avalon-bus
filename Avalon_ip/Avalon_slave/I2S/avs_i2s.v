@@ -56,13 +56,13 @@ reg [31:0]status;
     reg [31:0]readdata;
     assign avs_s0_readdata = readdata;
     always @(*) begin
+        readdata = 0;
         if(avs_s0_read)begin
             case (avs_s0_address)
                 0: readdata = data;
                 1: readdata = control;
                 2: readdata = status;
                 3: readdata = clk_div;
-                default: readdata = 0;
             endcase
         end
     end
