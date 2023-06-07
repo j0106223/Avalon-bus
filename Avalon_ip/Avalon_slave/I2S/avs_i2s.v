@@ -20,12 +20,12 @@ module avs_i2s (
     output       avs_s0_waitrequest;
     output [31:0]avs_s0_readdata;
     input  [31:0]avs_s0_writedata;
-    output avs_s0_export_i2s_sck;
-    output avs_s0_export_i2s_sd;
-    output avs_s0_export_i2s_ws;
-    wire i2s_sck,
-    wire i2s_sd,
-    wire i2s_ws
+    output       avs_s0_export_i2s_sck;
+    output       avs_s0_export_i2s_sd;
+    output       avs_s0_export_i2s_ws;
+    wire i2s_sck;
+    wire i2s_sd;
+    wire i2s_ws;
 
 //==================register map begin======================
 reg [DW-1:0]data;
