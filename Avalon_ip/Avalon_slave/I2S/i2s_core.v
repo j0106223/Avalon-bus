@@ -6,13 +6,15 @@ module i2s_core (
     data_left,
     sd
 );
-    parameter      DW = 8;
+    parameter      DW = 16;
+    parameter      DEPTH = 32;
     localparam     MSB = DW - 1;
     input          reset_n;
     input          sck;
     input          ws;//left right channel
     input [DW-1:0] data_right;//right channel
     input [DW-1:0] data_left;//left channel
+    output         done;
     output         sd;//one way transaction
 
     //======detect left right channel change========
