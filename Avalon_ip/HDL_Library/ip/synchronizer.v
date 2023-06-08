@@ -8,6 +8,7 @@ module synchronizer(
 parameter WIDTH = 1;
 //instance example :
 /*
+synchronizer inst(.clk(clk), reset_n(reset_n), in(), out());
 synchronizer #(.WIDTH()) inst(.clk(clk), reset_n(reset_n), in(), out());
 */    
     input  clk;
