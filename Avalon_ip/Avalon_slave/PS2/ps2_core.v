@@ -9,6 +9,7 @@ module ps2_core (
 );
     input   clk;
     input   reset_n;
+    input   send,
     input   ps2_clk;
     input   ps2_data_i;
     output  ps2_data_o;
@@ -27,6 +28,9 @@ module ps2_core (
         .in         (ps2_data_i),
         .out        (ps2_sync_data)
     );
+
+    //==============FSM begin==========================
+    localparam IDLE = ;
     always @(posedge clk or negedge reset_n) begin
         if(!reset_n)begin
 
@@ -34,5 +38,7 @@ module ps2_core (
             
         end
     end
+    //==============FSM end============================
+
 
 endmodule
