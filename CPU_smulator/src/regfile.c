@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int read_reg(struct regfile *regfile_inst, int index){
-    if(index > REG_NUM){
+    if(index >= 32){
         printf("register file access fail...\n");
         printf("wrong register index");
         exit(1);
@@ -10,7 +10,7 @@ int read_reg(struct regfile *regfile_inst, int index){
     return regfile_inst->x[index];
 }
 void write_reg(struct regfile *regfile_inst, int index, int data){
-    if(index > REG_NUM){
+    if(index >= 32){
         printf("register file access fail...\n");
         printf("wrong register index");
         exit(1);
@@ -19,7 +19,7 @@ void write_reg(struct regfile *regfile_inst, int index, int data){
 }
 void regfile_init(struct regfile *regfile_inst){
     int i;
-    for(i = 0; i < REG_NUM; i++){
+    for(i = 0; i < 32; i++){
         regfile_inst->x[i] = 0;
     }
 }
