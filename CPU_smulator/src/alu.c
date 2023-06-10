@@ -1,6 +1,7 @@
 #include "../inc/alu.h"
 
 int alu_decode(struct alu *alu_inst, int alu_opcode){
+    alu_inst->zero = ((alu_inst->a - alu_inst->a) == 0);
     switch (alu_opcode){
         case 0:alu_inst->result = alu_add(alu_inst->a, alu_inst->b);
             break;

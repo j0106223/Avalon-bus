@@ -2,7 +2,7 @@
 #define _REGFILE_HEADER_
 #include "cpu_config.h"
 struct regfile{
-    int x[REG_NUM];//need parameterize
+    int x[32];//need parameterize
 };
 char reg_name[][5] = {
     "zero",
