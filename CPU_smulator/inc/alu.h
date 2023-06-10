@@ -5,5 +5,11 @@ struct alu{
     int a;//operand 1
     int b;//operand 2
     int result;
+    int zero;
 };
+struct alu_control
+{
+    /* data */
+};
+
 #endif
