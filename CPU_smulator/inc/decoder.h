@@ -2,9 +2,10 @@
 #define _DECODER_HEADER_
 struct decoder{
     int opcode;
-    int ra1;
-    int ra2;
-    int wa;
-    int alu_opcode;
+    int rd;
+    int func3;
+    int rs1;
+    int rs2;
+    int func7;
 };
 #endif

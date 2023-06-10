@@ -1,9 +1,12 @@
 #include "../inc/alu.h"
 int alu_zero(int a, int b){
-    return a == b;
+    return (a == b);
 }
-int alu(int alu_opcode, int a, int b){
-    switch (alu_opcode){
+int alu_control(int ALUOp, int instr30, int func3){
+
+}
+int alu(int control, int a, int b){
+    switch (control){
         case 0:
             return alu_add(a, b);
             break;
