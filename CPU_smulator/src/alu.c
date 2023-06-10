@@ -1,29 +1,41 @@
 #include "../inc/alu.h"
-
-int alu_decode(struct alu *alu_inst, int alu_opcode){
-    alu_inst->zero = ((alu_inst->a - alu_inst->a) == 0);
+int alu_zero(int a, int b){
+    return a == b;
+}
+int alu(int alu_opcode, int a, int b){
     switch (alu_opcode){
-        case 0:alu_inst->result = alu_add(alu_inst->a, alu_inst->b);
+        case 0:
+            return alu_add(a, b);
             break;
-        case 1:alu_inst->result = alu_sub(alu_inst->a, alu_inst->b);
+        case 1:
+            return alu_sub(a, b);
             break;
-        case 2:alu_inst->result = alu_sll(alu_inst->a, alu_inst->b);
+        case 2:
+            return alu_sll(a, b);
             break;
-        case 3:alu_inst->result = alu_slt(alu_inst->a, alu_inst->b);
+        case 3:
+            return alu_slt(a, b);
             break;
-        case 4:alu_inst->result = alu_sltu(alu_inst->a, alu_inst->b);
+        case 4:
+            return alu_sltu(a, b);
             break;
-        case 5:alu_inst->result = alu_xor(alu_inst->a, alu_inst->b);
+        case 5:
+            return alu_xor(a, b);
             break;
-        case 6:alu_inst->result = alu_srl(alu_inst->a, alu_inst->b);
+        case 6:
+            return alu_srl(a, b);
             break;
-        case 7:alu_inst->result = alu_sra(alu_inst->a, alu_inst->b);
+        case 7:
+            return alu_sra(a, b);
             break;
-        case 8:alu_inst->result = alu_or(alu_inst->a, alu_inst->b);
+        case 8:
+            return alu_or(a, b);
             break;
-        case 9:alu_inst->result = alu_and(alu_inst->a, alu_inst->b);
+        case 9:
+            return alu_and(a, b);
             break;
-        default:alu_inst->result = 0;
+        default:
+            return 0;
             break;
     }
 }
