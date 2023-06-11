@@ -60,7 +60,9 @@ module uart_core (
         .clk_div    (clk_div),
         .clk_o      (uart_clk)
     );
-
+    localparam TX_IDLE;
+    localparam TX_LOAD;
+    localparam TX_TRANSMIT;
     always @(posedge uart_clk or negedge reset_n) begin
         if(!reset_n)begin
             tx_q <= 0;
@@ -71,15 +73,18 @@ module uart_core (
 
     
     //shift register
-    reg []tx_shift_reg;
+    reg [9:0]tx_shift_reg;
+    localparam START_BIT = 1'b0;
+    localparam STOP_BIT  = 1'b1;
     assign tx = tx_shift_reg[0];
     always @(posedge uart_clk or negedge reset_n) begin
         if(!reset_n)begin
             tx_shift_reg <= 0;
         end else begin
-            if()begin
-                tx_shift_reg <= {1'b0, tx_shift_reg[:1]};
-            end 
+            case ({load, tx_shift})
+                2'b01:tx_shift_reg <= {1'b1, tx_shift_reg[9:1]};
+                2'b10:tx_shift_reg <= {STOP_BIT, tx_data, START_BIT};
+            endcase
         end
     end
 //========================tx=====================================
