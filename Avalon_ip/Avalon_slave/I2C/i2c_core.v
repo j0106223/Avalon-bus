@@ -7,9 +7,9 @@ module i2c_core (
     rdata_i,
     wdata_o,
     sda_i,
-    scl_i,
     sda_o,
-    scl_o
+    scl_o,
+    done
 );
     input clk;
     input reset_n;
@@ -19,11 +19,9 @@ module i2c_core (
     output wdata_valid;
     input [31:0]clk_div;
     input sda_i;
-    input scl_i;
     output sda_o;
     output scl_o;
     output ready;
-    output valid;
     output done;
 
     reg sda;
@@ -73,21 +71,37 @@ module i2c_core (
                 next_state = ;
             end
             DONE:begin
-                
+                next_state = IDLE;
             end
             default;
         endcase
     end
 
     //output logic
-
+    assign ready = (state == IDLE);
 //========================FSM===============================================
-
+    wire en;
     always @(posedge clk or negedge reset_n) begin
         if(!reset_n)begin
             sda <= 1'b1;
         end else begin
+            if(en)begin
 
+            end
         end
+    end
+
+    //rdata shift register
+    always @(posedge scl_o) begin
+        
+    end
+
+    //table
+
+    always @(*) begin
+        case(cnt)
+            0:sda_o = 0;scl_o = 1;
+            1:sda_o = 0;scl_o = 0;
+        endcase
     end
 endmodule
