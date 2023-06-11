@@ -100,6 +100,13 @@ module i2c_core (
 
     always @(*) begin
         case(cnt)
+            //start
+            0:sda_o = 0;scl_o = 1;
+            1:sda_o = 0;scl_o = 0;
+            //tx data
+            //rx data
+            
+            //stop
             0:sda_o = 0;scl_o = 1;
             1:sda_o = 0;scl_o = 0;
         endcase
