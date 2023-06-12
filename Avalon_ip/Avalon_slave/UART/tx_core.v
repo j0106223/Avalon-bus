@@ -72,7 +72,7 @@ module tx_core (
             case({load, shift})
                 2'b10:shift_reg = {1'b1, tx_data, 1'b0};//stop, data, start
                 2'b01:begin
-                    shift_reg = {1'b1, tx_data[9:1]};
+                    shift_reg = {1'b1, shift_reg[9:1]};
                     cnt <= cnt + 1'b1;
                 end 
                 default:cnt <= 0;
