@@ -6,7 +6,7 @@ module tx_core_tb;
     reg [7:0] tx_data;
     wire      tx_ready;
     wire      tx;
-    wire      done;
+    wire      tx_done;
 
     initial begin
         $dumpfile("tx_core.vcd");

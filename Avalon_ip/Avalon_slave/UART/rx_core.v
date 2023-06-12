@@ -5,10 +5,11 @@ module rx_core (
     rx_done,
     rx
 );
-    input rx_clk;
-    input reset_n;
-    output [7:0]rx_data;
-    input rx; 
+    input        rx_clk;
+    input        reset_n;
+    output [7:0] rx_data;
+    output       rx_done;
+    input        rx; 
     //====2-stage D-FF sync============
     wire rx_sync;
     reg [1:0]rx_q;
@@ -43,7 +44,7 @@ module rx_core (
             IDLE:begin
                 if(!rx_sync)begin//start bit
                     next_state = RECEIVE;
-                end esle begin
+                end else begin
                     next_state = IDLE;
                 end
             end
@@ -68,6 +69,7 @@ module rx_core (
     
     reg [3:0]cnt;
     reg [7:0]shift_reg;
+    assign rx_data = shift_reg; 
     always @(posedge rx_clk or negedge reset_n) begin
         if(!reset_n)begin
             shift_reg <= 0;
