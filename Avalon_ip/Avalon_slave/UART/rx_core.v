@@ -16,7 +16,7 @@ module rx_core (
     assign rx_sync = rx_q[1];
     always @(posedge rx_clk or negedge reset_n) begin
         if(!reset_n)begin
-            rx_q <= 0;
+            rx_q <= 2'b11;
         end else begin
             rx_q[0] <= rx;
             rx_q[1] <= rx_q[0];
@@ -49,7 +49,7 @@ module rx_core (
                 end
             end
             RECEIVE:begin
-                if(cnt == 8)begin
+                if(cnt == 7)begin
                     next_state = DONE;
                 end else begin
                     next_state = RECEIVE;
@@ -72,11 +72,11 @@ module rx_core (
     assign rx_data = shift_reg; 
     always @(posedge rx_clk or negedge reset_n) begin
         if(!reset_n)begin
-            shift_reg <= 0;
+            shift_reg <= 8'hFF;
             cnt <= 0;
         end else begin
             if(shift)begin
-                shift_reg <= {rx_sync,shift_reg[7:1]};
+                shift_reg <= {rx_sync, shift_reg[7:1]};
                 cnt <= cnt + 1'b1;
             end else begin
                 cnt <= 0;

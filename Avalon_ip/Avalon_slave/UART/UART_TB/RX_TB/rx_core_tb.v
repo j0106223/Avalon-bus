@@ -18,17 +18,19 @@ module rx_core_tb;
     assign rx_clk = clk;
     assign tx_clk = clk;
 
-
+`ifdef DUMP_WAVE
     initial begin
         $dumpfile("rx_core.vcd");
         $dumpvars(0, rx_core_tb);
     end
+`endif
+    
     integer seed;
     integer fp;
     initial begin
         fp = $fopen("date.txt","r");
         if($fscanf(fp,"%d", seed))begin
-            $display("seed = %d", seed);
+            $display("testbench get seed = %d", seed);
         end else begin
             $display("fail to get random seed!!");
         end
@@ -39,28 +41,25 @@ module rx_core_tb;
         reset_n = 1;
         #1 reset_n = 0;
         #1 reset_n = 1;
-
-        repeat(10)begin
+        repeat(50)begin
             wait(tx_ready == 1'b1);
             tx_valid = 1'b1;
             tx_data  = $random(seed);
-            $display("tx_data = %d", tx_data);
+            $write("tx_data = %d\t", tx_data);
             @(posedge tx_done)begin
                 tx_valid = 1'b0;
             end
             @(posedge rx_done)begin
                 $display("rx_data = %d", rx_data);
+                if(rx_data != tx_data)begin
+                    $display("uart rx fail!!");
+                end
             end
         end
+        $display("uart rx pass!!");
         $finish;
     end
 
-
-    always @(posedge rx_clk) begin
-        if(rx_done)begin
-            
-        end
-    end
     rx_core dut(
         .rx_clk  (rx_clk),
         .reset_n (reset_n),
