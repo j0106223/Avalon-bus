@@ -27,66 +27,23 @@ module uart_core (
     //IO
     input  rx;
     output tx;
-//========================rx=====================================
-    //2-stage sync input rx
-    reg [1:0]sync_rx_q;
-    wire       sync_rx;
-    assign sync_rx = sync_rx_q[1];
 
-    always @(posedge clk or negedge reset_n) begin
-        if(!reset_n)begin
-            sync_rx_q <= 0;
-        end else begin
-            sync_rx_q[0] <= rx;
-            sync_rx_q[1] <= sync_rx_q[0];
-        end
-    end
-//========================rx=====================================
-    
-    reg []rx_shift_reg;
-    always @(posedge uart_clk or negedge reset_n) begin
-        if(!reset_n)begin
-             <= 0;
-        end else begin
-            rx_shift_reg <= {rx_shift_regt[6:0], sync_rx};
-        end
-    end
-//========================tx=====================================
 
-    wire uart_clk;
-    clk_gen uart_clock_gen(
-        .clk_i      (clk),//system, SoC clock or crystal oscillator
-        .reset_n    (reset_n),
-        .clk_div    (clk_div),
-        .clk_o      (uart_clk)
+    rx_core rx_core_inst(
+        .rx_clk  (rx_clk),
+        .reset_n (reset_n),
+        .rx_data (rx_data),
+        .rx_done (rx_done),
+        .rx      (tx)
     );
-    localparam TX_IDLE;
-    localparam TX_LOAD;
-    localparam TX_TRANSMIT;
-    always @(posedge uart_clk or negedge reset_n) begin
-        if(!reset_n)begin
-            tx_q <= 0;
-        end else begin
-            
-        end
-    end
 
-    
-    //shift register
-    reg [9:0]tx_shift_reg;
-    localparam START_BIT = 1'b0;
-    localparam STOP_BIT  = 1'b1;
-    assign tx = tx_shift_reg[0];
-    always @(posedge uart_clk or negedge reset_n) begin
-        if(!reset_n)begin
-            tx_shift_reg <= 0;
-        end else begin
-            case ({load, tx_shift})
-                2'b01:tx_shift_reg <= {1'b1, tx_shift_reg[9:1]};
-                2'b10:tx_shift_reg <= {STOP_BIT, tx_data, START_BIT};
-            endcase
-        end
-    end
-//========================tx=====================================
-
+    tx_core tx_core_inst(
+        .tx_clk     (tx_clk),
+        .reset_n    (reset_n),
+        .tx_valid   (tx_valid),
+        .tx_data    (tx_data),
+        .tx_ready   (tx_ready),
+        .tx_done    (tx_done),
+        .tx         (tx)
+    );
 endmodule
