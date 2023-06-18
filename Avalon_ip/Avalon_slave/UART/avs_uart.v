@@ -6,7 +6,10 @@ module avs_uart (
     avs_s0_write,
     avs_s0_waitrequest,
     avs_s0_readdata,
-    avs_s0_writedata
+    avs_s0_writedata,
+    avs_s0_irq,
+    avs_s0_export_rx,
+    avs_s0_export_tx
 );
     input          clk;
     input          reset_n;
@@ -16,7 +19,9 @@ module avs_uart (
     output         avs_s0_waitrequest;
     output  [31:0] avs_s0_readdata;
     input   [31:0] avs_s0_writedata;
-
+    output         avs_s0_irq;
+    output         avs_s0_export_rx;
+    output         avs_s0_export_tx;
     reg  [7:0] rx_data; //reg[0]
     reg  [7:0] tx_data; //reg[1]
     reg  [7:0] control; //reg[2]
@@ -25,48 +30,70 @@ module avs_uart (
     wire tx_data_we = avs_s0_write & (avs_s0_address == 3'd1);
     wire control_we = avs_s0_write & (avs_s0_address == 3'd2);
     wire clk_div_we = avs_s0_write & (avs_s0_address == 3'd4);
-    always @(posedge clk or negedge reset_n) begin
-        if(!reset_n)begin
-            tx_data <= 0;
-            control <= 0;
-            clk_div <= 0;
-        end else begin
-            if(avs_s0_write)begin
-                case (avs_s0_address)
-                    1: tx_data <= avs_s0_writedata;
-                    2: control <= avs_s0_writedata;
-                    4: clk_div <= avs_s0_writedata;
-                endcase
-            end
-        end
-    end
+    assign avs_s0_irq = (status[0] & control[0]) ||
+                        (status[1] & control[1]);
 //============update register================
     always @(posedge clk or negedge reset_n) begin
         if(!reset_n)begin
-            status<=0;
+            tx_data <= 0;
+        end else begin
+            if(tx_data_we)begin
+                tx_data <= avs_s0_writedata;
+            end
+        end
+    end
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            control <= 0;
+        end else begin
+            if(control_we)begin
+                //bit[0]:enable rrdy interrupt
+                //bit[1]:enable trdy interrupt
+                control <= avs_s0_writedata;
+            end
+        end
+    end
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            clk_div <= 0;
+        end else begin
+            if(clk_div_we)begin
+                clk_div <= avs_s0_writedata;
+            end
+        end
+    end
+
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            rx_data <= 0;
         end else begin
             if(uart_core_rx_done)begin
                 rx_data <= uart_core_rx_data;
             end
         end
     end
-    
-    /*always @(*) begin
-        if(avs_s0_read)begin
-            case (avs_s0_address)
-                0: readdata = {24'b0, rx_data};
-                1: readdata = {24'b0, tx_data};
-                2: readdata = {24'b0, control};
-                3: readdata = {24'b0, status};
-                4: readdata = clk_div;
-                default: readdate = 0;
-            endcase
+
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            status <= 0;
         end else begin
-            readdate = 0;
+        //bit[0]:rrdy
+        //bit[1]:trdy
+        //bit[2]:
+        //bit[3]:
+        //bit[4]:
+        //bit[5]:
+        //bit[6]:
+        //bit[7]:
+            if(uart_core_rx_done)begin
+                status[0] <= 1'b1;
+            end
+            if(uart_core_tx_done)begin
+                status[1] <= 1'b1;
+            end
         end
     end
-*/
-
+    
     wire uart_core_clk;
     wire uart_core_rx_clk;
     wire uart_core_tx_clk;
