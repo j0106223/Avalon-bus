@@ -20,7 +20,7 @@ module avs_uart (
     output  [31:0] avs_s0_readdata;
     input   [31:0] avs_s0_writedata;
     output         avs_s0_irq;
-    output         avs_s0_export_rx;
+    input          avs_s0_export_rx;
     output         avs_s0_export_tx;
     reg  [7:0] rx_data; //reg[0]
     reg  [7:0] tx_data; //reg[1]
@@ -30,6 +30,7 @@ module avs_uart (
     wire tx_data_we = avs_s0_write & (avs_s0_address == 3'd1);
     wire control_we = avs_s0_write & (avs_s0_address == 3'd2);
     wire clk_div_we = avs_s0_write & (avs_s0_address == 3'd4);
+    assign avs_s0_waitrequest = 1'b1;
     assign avs_s0_irq = (status[0] & control[0]) ||
                         (status[1] & control[1]);
 //============update register================
