@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Sep 25 09:49:26 2013
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE0_NANO
+Top-level Entity Name : DE0_NANO
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 48 / 22,320 ( < 1 % )
+    Total combinational functions : 44 / 22,320 ( < 1 % )
+    Dedicated logic registers : 48 / 22,320 ( < 1 % )
+Total registers : 48
+Total pins : 154 / 154 ( 100 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

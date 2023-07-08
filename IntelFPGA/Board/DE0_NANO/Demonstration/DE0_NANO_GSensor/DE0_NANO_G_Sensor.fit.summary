@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Sep 25 10:53:07 2013
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE0_NANO_G_Sensor
+Top-level Entity Name : DE0_NANO_G_Sensor
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 178 / 22,320 ( < 1 % )
+    Total combinational functions : 164 / 22,320 ( < 1 % )
+    Dedicated logic registers : 112 / 22,320 ( < 1 % )
+Total registers : 112
+Total pins : 15 / 154 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

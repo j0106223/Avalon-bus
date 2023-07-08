@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Sep 25 11:45:07 2013
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : my_first_fpga
+Top-level Entity Name : my_first_fpga
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 31 / 22,320 ( < 1 % )
+    Total combinational functions : 31 / 22,320 ( < 1 % )
+    Dedicated logic registers : 27 / 22,320 ( < 1 % )
+Total registers : 27
+Total pins : 6 / 154 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

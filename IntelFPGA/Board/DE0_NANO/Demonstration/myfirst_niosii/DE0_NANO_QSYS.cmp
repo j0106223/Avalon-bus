@@ -1,0 +1,8 @@
+	component DE0_NANO_QSYS is
+		port (
+			reset_n                   : in  std_logic                    := 'X'; -- reset_n
+			clk_50                    : in  std_logic                    := 'X'; -- clk
+			out_port_from_the_pio_led : out std_logic_vector(7 downto 0)         -- export
+		);
+	end component DE0_NANO_QSYS;
+

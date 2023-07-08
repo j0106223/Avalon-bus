@@ -1,0 +1,61 @@
+
+**** Build of configuration Nios II for project DE0_Nano ****
+
+make all 
+Info: Building ../DE0_Nano_bsp/
+make --no-print-directory -C ../DE0_Nano_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'EnableKeyInterrupt':
+main.c:111: warning: implicit declaration of function 'alt_irq_register'
+main.c: In function 'DEMO_ACCELEROMETER':
+main.c:192: warning: pointer targets in passing argument 2 of 'ADXL345_SPI_XYZ_Read' differ in signedness
+Info: Compiling terasic_lib/I2C.c to obj/default/terasic_lib/I2C.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/terasic_lib/I2C.o terasic_lib/I2C.c
+Info: Compiling terasic_lib/accelerometer_adxl345_spi.c to obj/default/terasic_lib/accelerometer_adxl345_spi.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/terasic_lib/accelerometer_adxl345_spi.o terasic_lib/accelerometer_adxl345_spi.c
+Info: Compiling terasic_lib/adc_spi_read.c to obj/default/terasic_lib/adc_spi_read.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/terasic_lib/adc_spi_read.o terasic_lib/adc_spi_read.c
+Info: Compiling terasic_lib/flash.c to obj/default/terasic_lib/flash.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/terasic_lib/flash.o terasic_lib/flash.c
+terasic_lib/flash.c: In function 'Flash_Erase':
+terasic_lib/flash.c:239: warning: pointer targets in passing argument 3 of 'Flash_GetBlockInfo' differ in signedness
+terasic_lib/flash.c:239: warning: pointer targets in passing argument 4 of 'Flash_GetBlockInfo' differ in signedness
+terasic_lib/flash.c: In function 'FLASH_Verify':
+terasic_lib/flash.c:336: warning: pointer targets in passing argument 3 of 'Flash_GetBlockInfo' differ in signedness
+terasic_lib/flash.c:336: warning: pointer targets in passing argument 4 of 'Flash_GetBlockInfo' differ in signedness
+terasic_lib/flash.c:377: warning: pointer targets in passing argument 3 of 'Flash_GetBlockInfo' differ in signedness
+terasic_lib/flash.c:377: warning: pointer targets in passing argument 4 of 'Flash_GetBlockInfo' differ in signedness
+Info: Compiling terasic_lib/terasic_spi.c to obj/default/terasic_lib/terasic_spi.o
+nios2-elf-gcc -xc -MP -MMD -c -I../DE0_Nano_bsp//HAL/inc -I../DE0_Nano_bsp/ -I../DE0_Nano_bsp//drivers/inc -Iterasic_lib  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/terasic_lib/terasic_spi.o terasic_lib/terasic_spi.c
+Info: Linking DE0_Nano.elf
+nios2-elf-g++  -T'../DE0_Nano_bsp//linker.x' -msys-crt0='../DE0_Nano_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../DE0_Nano_bsp/   -Wl,-Map=DE0_Nano.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o DE0_Nano.elf obj/default/main.o obj/default/terasic_lib/I2C.o obj/default/terasic_lib/accelerometer_adxl345_spi.o obj/default/terasic_lib/adc_spi_read.o obj/default/terasic_lib/flash.o obj/default/terasic_lib/terasic_spi.o -lm 
+nios2-elf-insert DE0_Nano.elf --thread_model hal --cpu_name cpu --qsys true --simulation_enabled false --id 0 --sidp 0x4000070 --timestamp 1380075566 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name DE0_Nano_SOPC --quartus_project_dir "D:/project/de0_nano/cd/DE0_Nano_CDROM/Demonstration/DE0_Nano_QSYS_DEMO" --jdi D:/project/de0_nano/DE0_Nano_QSYS_DEMO/DE0_Nano.jdi --sopcinfo D:/project/de0_nano/DE0_Nano_QSYS_DEMO/DE0_Nano_SOPC.sopcinfo
+Info: (DE0_Nano.elf) 96 KBytes program size (code + initialized data).
+Info:                32664 KBytes free for stack + heap.
+Info: Creating DE0_Nano.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source DE0_Nano.elf >DE0_Nano.objdump
+[DE0_Nano build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project DE0_Nano ****
+
+make all 
+Info: Building ../DE0_Nano_bsp/
+make --no-print-directory -C ../DE0_Nano_bsp/
+[BSP build complete]
+[DE0_Nano build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project DE0_Nano ****
+
+make all 
+Info: Building ../DE0_Nano_bsp/
+make --no-print-directory -C ../DE0_Nano_bsp/
+[BSP build complete]
+[DE0_Nano build complete]
+
+**** Build Finished ****

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Oct 12 10:06:17 2013
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE0_NANO_SDRAM_Nios_Test
+Top-level Entity Name : DE0_NANO_SDRAM_Nios_Test
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 4,166 / 22,320 ( 19 % )
+    Total combinational functions : 3,610 / 22,320 ( 16 % )
+    Dedicated logic registers : 2,736 / 22,320 ( 12 % )
+Total registers : 2805
+Total pins : 154 / 154 ( 100 % )
+Total virtual pins : 0
+Total memory bits : 65,280 / 608,256 ( 11 % )
+Embedded Multiplier 9-bit elements : 4 / 132 ( 3 % )
+Total PLLs : 1 / 4 ( 25 % )

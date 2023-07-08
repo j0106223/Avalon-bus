@@ -1,0 +1,204 @@
+//IP Functional Simulation Model
+//VERSION_BEGIN 10.1SP1 cbx_mgl 2011:01:19:21:15:40:SJ cbx_simgen 2011:01:19:21:13:40:SJ  VERSION_END
+// synthesis VERILOG_INPUT_VERSION VERILOG_2001
+// altera message_off 10463
+
+
+
+// Copyright (C) 1991-2011 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// You may only use these simulation model output files for simulation
+// purposes and expressly not for synthesis or any other purposes (in which
+// event Altera disclaims all warranties of any kind).
+
+
+//synopsys translate_off
+
+//synthesis_resources = cycloneive_pll 1 lut 6 
+`timescale 1 ps / 1 ps
+module  altpll_sys
+	( 
+	address,
+	c0,
+	c1,
+	c2,
+	c3,
+	c4,
+	clk,
+	locked,
+	phasedone,
+	read,
+	readdata,
+	reset,
+	write,
+	writedata) /* synthesis synthesis_clearbox=1 */;
+	input   [1:0]  address;
+	output   c0;
+	output   c1;
+	output   c2;
+	output   c3;
+	output   c4;
+	input   clk;
+	output   locked;
+	output   phasedone;
+	input   read;
+	output   [31:0]  readdata;
+	input   reset;
+	input   write;
+	input   [31:0]  writedata;
+
+	wire  [4:0]   wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk;
+	wire  wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_fbout;
+	wire  wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_locked;
+	reg	altpll_sys_altpll_sys_altpll_1hu2_sd1_pll_lock_sync_125q;
+	reg	altpll_sys_pfdena_reg_6q;
+	reg	altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe4a_0_117q;
+	reg	altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe5a_0_120q;
+	reg	altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe6a_0_118q;
+	reg	altpll_sys_prev_reset_4q;
+	wire  s_wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_locked_128_dataout;
+	wire  s_wire_altpll_sys_w_select_control_17_dataout;
+	wire  s_wire_altpll_sys_w_select_status_20_dataout;
+	wire  s_wire_altpll_sys_wire_pfdena_reg_ena_15_dataout;
+	wire  s_wire_vcc;
+
+	cycloneive_pll   altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148
+	( 
+	.activeclock(),
+	.areset(altpll_sys_prev_reset_4q),
+	.clk(wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk),
+	.clkbad(),
+	.fbin(wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_fbout),
+	.fbout(wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_fbout),
+	.inclk({1'b0, clk}),
+	.locked(wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_locked),
+	.phasedone(),
+	.scandataout(),
+	.scandone(),
+	.vcooverrange(),
+	.vcounderrange(),
+	.clkswitch(),
+	.configupdate(),
+	.pfdena(),
+	.phasecounterselect(),
+	.phasestep(),
+	.phaseupdown(),
+	.scanclk(),
+	.scanclkena(),
+	.scandata()
+	);
+	defparam
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.bandwidth_type = "auto",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk0_divide_by = 1,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk0_duty_cycle = 50,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk0_multiply_by = 2,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk0_phase_shift = "0",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk1_divide_by = 1,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk1_duty_cycle = 50,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk1_multiply_by = 2,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk1_phase_shift = "-1667",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk2_divide_by = 5,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk2_duty_cycle = 50,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk2_multiply_by = 1,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk2_phase_shift = "0",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk3_divide_by = 5,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk3_duty_cycle = 50,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk3_multiply_by = 4,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk3_phase_shift = "0",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk4_divide_by = 25,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk4_duty_cycle = 50,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk4_multiply_by = 1,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.clk4_phase_shift = "0",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.compensate_clock = "clk0",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.inclk0_input_frequency = 20000,
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.lpm_type = "cycloneive_pll",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.operation_mode = "normal",
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148.pll_type = "auto";
+	initial
+	begin
+		altpll_sys_altpll_sys_altpll_1hu2_sd1_pll_lock_sync_125q = 0;
+	end
+	always @ ( posedge wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_locked or  posedge altpll_sys_prev_reset_4q)
+	begin
+		if (altpll_sys_prev_reset_4q == 1'b1) 
+		begin
+			altpll_sys_altpll_sys_altpll_1hu2_sd1_pll_lock_sync_125q <= 0;
+		end
+		else 
+		begin
+			altpll_sys_altpll_sys_altpll_1hu2_sd1_pll_lock_sync_125q <= s_wire_vcc;
+		end
+	end
+	initial
+	begin
+		altpll_sys_pfdena_reg_6q = 0;
+	end
+	always @ ( posedge clk or  posedge reset)
+	begin
+		if (reset == 1'b1) 
+		begin
+			altpll_sys_pfdena_reg_6q <= 1;
+		end
+		else if  (s_wire_altpll_sys_wire_pfdena_reg_ena_15_dataout == 1'b1) 
+		begin
+			altpll_sys_pfdena_reg_6q <= writedata[1];
+		end
+	end
+	event altpll_sys_pfdena_reg_6q_event;
+	initial
+		#1 ->altpll_sys_pfdena_reg_6q_event;
+	always @(altpll_sys_pfdena_reg_6q_event)
+		altpll_sys_pfdena_reg_6q <= 1;
+	initial
+	begin
+		altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe4a_0_117q = 0;
+		altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe5a_0_120q = 0;
+		altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe6a_0_118q = 0;
+		altpll_sys_prev_reset_4q = 0;
+	end
+	always @ ( posedge clk or  posedge reset)
+	begin
+		if (reset == 1'b1) 
+		begin
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe4a_0_117q <= 0;
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe5a_0_120q <= 0;
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe6a_0_118q <= 0;
+			altpll_sys_prev_reset_4q <= 0;
+		end
+		else 
+		begin
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe4a_0_117q <= s_wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_locked_128_dataout;
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe5a_0_120q <= altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe4a_0_117q;
+			altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe6a_0_118q <= altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe5a_0_120q;
+			altpll_sys_prev_reset_4q <= (s_wire_altpll_sys_wire_pfdena_reg_ena_15_dataout & writedata[0]);
+		end
+	end
+	assign
+		c0 = wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk[0],
+		c1 = wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk[1],
+		c2 = wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk[2],
+		c3 = wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk[3],
+		c4 = wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_clk[4],
+		locked = s_wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_locked_128_dataout,
+		phasedone = 1'b0,
+		readdata = {{30{1'b0}}, (((altpll_sys_pfdena_reg_6q & s_wire_altpll_sys_w_select_control_17_dataout) | s_wire_altpll_sys_w_select_status_20_dataout) & read), (((altpll_sys_prev_reset_4q & s_wire_altpll_sys_w_select_control_17_dataout) | (s_wire_altpll_sys_w_select_status_20_dataout & altpll_sys_altpll_sys_stdsync_sv6_stdsync2_altpll_sys_dffpipe_l2c_dffpipe3_dffe6a_0_118q)) & read)},
+		s_wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_locked_128_dataout = (altpll_sys_altpll_sys_altpll_1hu2_sd1_pll_lock_sync_125q & wire_altpll_sys_altpll_sys_altpll_1hu2_sd1_cycloneive_pll_pll7_148_locked),
+		s_wire_altpll_sys_w_select_control_17_dataout = (address[0] & (~ address[1])),
+		s_wire_altpll_sys_w_select_status_20_dataout = ((~ address[0]) & (~ address[1])),
+		s_wire_altpll_sys_wire_pfdena_reg_ena_15_dataout = (s_wire_altpll_sys_w_select_control_17_dataout & write),
+		s_wire_vcc = 1'b1;
+endmodule //altpll_sys
+//synopsys translate_on
+//VALID FILE

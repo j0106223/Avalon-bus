@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="Default">
+  <columns>
+   <connections preferredWidth="79" />
+   <export visible="0" />
+   <irq preferredWidth="34" />
+   <opcodeName visible="0" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="159" />
+   <clocksource preferredWidth="158" />
+   <frequency preferredWidth="154" />
+  </columns>
+ </clocktable>
+ <window width="984" height="931" x="-1260" y="-11" />
+ <library
+   expandedCategories="Library/Memories and Memory Controllers/SDRAM,Library/Peripherals,Library/PLL,Library,Library/Processors,Library/Memories and Memory Controllers/Flash,Library/Memories and Memory Controllers,Library/Peripherals/Debug and Performance,Library/Interface Protocols/Serial,Project/Terasic Technologies Inc.,Library/Memories and Memory Controllers/On-Chip,Library/Bridges and Adapters,Library/Interface Protocols,Project,Library/Bridges and Adapters/Memory Mapped,Library/Peripherals/Microcontroller Peripherals" />
+</preferences>

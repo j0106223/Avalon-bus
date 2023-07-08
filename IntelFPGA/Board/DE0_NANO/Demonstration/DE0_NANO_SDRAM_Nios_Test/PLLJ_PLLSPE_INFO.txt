@@ -1,0 +1,5 @@
+PLL_Name	DE0_NANO_QSYS:u0|DE0_NANO_QSYS_altpll:altpll|DE0_NANO_QSYS_altpll_altpll_8ra2:sd1|pll7
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

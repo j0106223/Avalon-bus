@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Oct 12 10:05:17 2013
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : DE0_NANO_SDRAM_Nios_Test
+Top-level Entity Name : DE0_NANO_SDRAM_Nios_Test
+Family : Cyclone IV E
+Total logic elements : 4,589
+    Total combinational functions : 3,599
+    Dedicated logic registers : 2,861
+Total registers : 2861
+Total pins : 154
+Total virtual pins : 0
+Total memory bits : 65,280
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1

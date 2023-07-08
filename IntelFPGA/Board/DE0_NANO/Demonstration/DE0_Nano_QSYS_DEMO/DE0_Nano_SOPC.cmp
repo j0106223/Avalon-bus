@@ -1,0 +1,41 @@
+	component DE0_Nano_SOPC is
+		port (
+			reset_n                              : in    std_logic                     := 'X';             -- reset_n
+			clk_50                               : in    std_logic                     := 'X';             -- clk
+			in_port_to_the_key                   : in    std_logic_vector(1 downto 0)  := (others => 'X'); -- export
+			in_port_to_the_sw                    : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
+			out_port_from_the_led                : out   std_logic_vector(7 downto 0);                     -- export
+			out_port_from_the_i2c_scl            : out   std_logic;                                        -- export
+			bidir_port_to_and_from_the_i2c_sda   : inout std_logic                     := 'X';             -- export
+			zs_addr_from_the_sdram               : out   std_logic_vector(12 downto 0);                    -- addr
+			zs_ba_from_the_sdram                 : out   std_logic_vector(1 downto 0);                     -- ba
+			zs_cas_n_from_the_sdram              : out   std_logic;                                        -- cas_n
+			zs_cke_from_the_sdram                : out   std_logic;                                        -- cke
+			zs_cs_n_from_the_sdram               : out   std_logic;                                        -- cs_n
+			zs_dq_to_and_from_the_sdram          : inout std_logic_vector(15 downto 0) := (others => 'X'); -- dq
+			zs_dqm_from_the_sdram                : out   std_logic_vector(1 downto 0);                     -- dqm
+			zs_ras_n_from_the_sdram              : out   std_logic;                                        -- ras_n
+			zs_we_n_from_the_sdram               : out   std_logic;                                        -- we_n
+			altpll_sys                           : out   std_logic;                                        -- clk
+			altpll_sdram                         : out   std_logic;                                        -- clk
+			altpll_io                            : out   std_logic;                                        -- clk
+			altpll_sys_c3_out                    : out   std_logic;                                        -- clk
+			altpll_adc                           : out   std_logic;                                        -- clk
+			locked_from_the_altpll_sys           : out   std_logic;                                        -- export
+			phasedone_from_the_altpll_sys        : out   std_logic;                                        -- export
+			in_port_to_the_g_sensor_int          : in    std_logic                     := 'X';             -- export
+			dclk_from_the_epcs                   : out   std_logic;                                        -- dclk
+			sce_from_the_epcs                    : out   std_logic;                                        -- sce
+			sdo_from_the_epcs                    : out   std_logic;                                        -- sdo
+			data0_to_the_epcs                    : in    std_logic                     := 'X';             -- data0
+			SPI_OUT_from_the_adc_spi_read        : out   std_logic;                                        -- OUT
+			SPI_IN_to_the_adc_spi_read           : in    std_logic                     := 'X';             -- IN
+			SPI_CS_n_from_the_adc_spi_read       : out   std_logic;                                        -- CS_n
+			SPI_CLK_from_the_adc_spi_read        : out   std_logic;                                        -- CLK
+			SPI_SDIO_to_and_from_the_gsensor_spi : inout std_logic                     := 'X';             -- SDIO
+			SPI_SCLK_from_the_gsensor_spi        : out   std_logic;                                        -- SCLK
+			SPI_CS_n_from_the_gsensor_spi        : out   std_logic;                                        -- CS_n
+			out_port_from_the_select_i2c_clk     : out   std_logic                                         -- export
+		);
+	end component DE0_Nano_SOPC;
+

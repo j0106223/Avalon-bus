@@ -1,0 +1,36 @@
+# clk_50
+# cpu
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu.ocp]
+# sysid
+# timer
+# key
+# sw
+# led
+# i2c_scl
+# i2c_sda
+# sdram
+# altpll_sys
+set_global_assignment -name TCL_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_altpll/altera_avalon_altpll_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) altpll_sys.v]
+# clock_crossing_io
+# g_sensor_int
+# epcs
+# clock_crossing_io2
+# jtag_uart
+# adc_spi_read
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) ip/TERASIC_ADC_READ/TERASIC_ADC_READ_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) ip/TERASIC_ADC_READ/TERASIC_ADC_READ.v]
+set_global_assignment -name VHDL_FILE [file join $::quartus(qip_path) ip/TERASIC_ADC_READ/ADC_READ.vhd]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) adc_spi_read.v]
+# gsensor_spi
+set_global_assignment -name TCL_FILE [file join $::quartus(qip_path) ip/TARASIC_SPI_3WIRE/TERASIC_SPI_3WIRE_hw.tcl]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) ip/TARASIC_SPI_3WIRE/TERASIC_SPI_3WIRE.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) ip/TARASIC_SPI_3WIRE/SPI_3WIRE.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) ip/TARASIC_SPI_3WIRE/gsensor_fifo.v]
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) gsensor_spi.v]
+# select_i2c_clk
+# null
+set_global_assignment -name SDC_FILE [file join $::quartus(ip_rootpath) altera/sopc_builder_ip/altera_avalon_clock_adapter/altera_avalon_clock_adapter.sdc]
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID 0018F30B8B170000012E47594EB2 
+ 

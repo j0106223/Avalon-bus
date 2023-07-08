@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project DE0_Nano ****
+
+make all 
+Info: Building ../DE0_Nano_bsp/
+make --no-print-directory -C ../DE0_Nano_bsp/
+[BSP build complete]
+[DE0_Nano build complete]
+
+**** Build Finished ****
