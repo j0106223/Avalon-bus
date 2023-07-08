@@ -1,0 +1,785 @@
+Analysis & Synthesis report for DE10_STD_FPGA
+Thu Jun 02 13:39:39 2022
+Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jun 02 13:39:39 2022       ;
+; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
+; Revision Name                   ; DE10_STD_FPGA                               ;
+; Top-level Entity Name           ; DE10_STD_FPGA                               ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 73                                          ;
+; Total pins                      ; 178                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; DE10_STD_FPGA      ; DE10_STD_FPGA      ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
+; DE10_STD_FPGA.v                  ; yes             ; User Verilog HDL File  ; D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v ;         ;
+; Debounce.v                       ; yes             ; User Verilog HDL File  ; D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/Debounce.v      ;         ;
+; Debounce_ALL.v                   ; yes             ; User Verilog HDL File  ; D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/Debounce_ALL.v  ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 40             ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 40             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 2              ;
+;     -- 5 input functions                    ; 3              ;
+;     -- 4 input functions                    ; 4              ;
+;     -- <=3 input functions                  ; 31             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 73             ;
+;                                             ;                ;
+; I/O pins                                    ; 178            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 63             ;
+; Total fan-out                               ; 538            ;
+; Average fan-out                             ; 1.02           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                          ; Entity Name   ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+---------------+--------------+
+; |DE10_STD_FPGA                        ; 40 (14)             ; 73 (10)                   ; 0                 ; 0          ; 178  ; 0            ; |DE10_STD_FPGA                                               ; DE10_STD_FPGA ; work         ;
+;    |Debounce_ALL:u0|                  ; 26 (0)              ; 63 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0                               ; Debounce_ALL  ; work         ;
+;       |Debounce:KEY_Debounce[0].inst| ; 26 (26)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst ; Debounce      ; work         ;
+;       |Debounce:KEY_Debounce[1].inst| ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst ; Debounce      ; work         ;
+;       |Debounce:KEY_Debounce[2].inst| ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst ; Debounce      ; work         ;
+;       |Debounce:KEY_Debounce[3].inst| ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[0].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[0].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[1].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[1].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[2].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[2].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[3].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[3].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[4].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[4].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[5].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[5].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[6].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[6].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[7].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[7].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[8].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[8].inst  ; Debounce      ; work         ;
+;       |Debounce:SW_Debounce[9].inst|  ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |DE10_STD_FPGA|Debounce_ALL:u0|Debounce:SW_Debounce[9].inst  ; Debounce      ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                ;
++-----------------------------------------------------------+-----------------------------------------------------------------------+
+; Register name                                             ; Reason for Removal                                                    ;
++-----------------------------------------------------------+-----------------------------------------------------------------------+
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[20] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[20] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[20] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[20]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[20] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[19] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[19] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[19] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[19]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[19] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[18] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[18] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[18] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[18]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[18] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[17] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[17] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[17] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[17]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[17] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[16] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[16] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[16] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[16]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[16] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[15] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[15] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[15] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[15]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[15] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[14] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[14] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[14] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[14]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[14] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[13] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[13] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[13] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[13]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[13] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[12] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[12] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[12] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[12]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[12] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[11] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[11] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[11] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[11]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[11] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[10] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[10] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[10] ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[10]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[10] ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[9]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[9]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[9]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[9]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[9]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[8]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[8]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[8]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[8]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[8]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[7]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[7]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[7]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[7]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[7]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[6]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[6]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[6]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[6]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[6]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[5]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[5]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[5]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[5]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[5]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[4]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[4]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[4]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[4]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[4]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[3]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[3]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[3]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[3]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[3]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[2]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[2]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[2]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[2]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[2]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[1]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[1]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[1]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[1]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[1]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[1].inst|counter[0]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[2].inst|counter[0]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:KEY_Debounce[3].inst|counter[0]  ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[0].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[1].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[2].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[3].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[4].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[5].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[6].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[7].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[8].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Debounce_ALL:u0|Debounce:SW_Debounce[9].inst|counter[0]   ; Merged with Debounce_ALL:u0|Debounce:KEY_Debounce[0].inst|counter[0]  ;
+; Total Number of Removed Registers = 273                   ;                                                                       ;
++-----------------------------------------------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 21    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 14    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 73                          ;
+;     CLR               ; 10                          ;
+;     ENA               ; 14                          ;
+;     SCLR              ; 21                          ;
+;     plain             ; 28                          ;
+; arriav_io_obuf        ; 56                          ;
+; arriav_lcell_comb     ; 41                          ;
+;     arith             ; 30                          ;
+;         1 data inputs ; 29                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 11                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 3                           ;
+;         6 data inputs ; 2                           ;
+; boundary_port         ; 178                         ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.10                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
+    Info: Processing started: Thu Jun 02 13:39:30 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE10_STD_FPGA -c DE10_STD_FPGA
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Warning (10263): Verilog HDL Event Control warning at DE10_STD_FPGA.v(79): event expression contains "|" or "||" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 79
+Warning (10261): Verilog HDL Event Control warning at DE10_STD_FPGA.v(79): Event Control contains a complex event expression File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 79
+Info (12021): Found 1 design units, including 1 entities, in source file de10_std_fpga.v
+    Info (12023): Found entity 1: DE10_STD_FPGA File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
+    Info (12023): Found entity 1: Debounce File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/Debounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debounce_all.v
+    Info (12023): Found entity 1: Debounce_ALL File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/Debounce_ALL.v Line: 1
+Info (12127): Elaborating entity "DE10_STD_FPGA" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DE10_STD_FPGA.v(77): object "temp1" assigned a value but never read File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 77
+Warning (10036): Verilog HDL or VHDL warning at DE10_STD_FPGA.v(78): object "temp2" assigned a value but never read File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 78
+Warning (10034): Output port "HEX0" at DE10_STD_FPGA.v(24) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+Warning (10034): Output port "HEX1" at DE10_STD_FPGA.v(25) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+Warning (10034): Output port "HEX2" at DE10_STD_FPGA.v(26) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+Warning (10034): Output port "HEX3" at DE10_STD_FPGA.v(27) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+Warning (10034): Output port "HEX4" at DE10_STD_FPGA.v(28) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+Warning (10034): Output port "HEX5" at DE10_STD_FPGA.v(29) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+Warning (10034): Output port "DRAM_ADDR" at DE10_STD_FPGA.v(32) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+Warning (10034): Output port "DRAM_BA" at DE10_STD_FPGA.v(33) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 33
+Warning (10034): Output port "VGA_B" at DE10_STD_FPGA.v(46) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+Warning (10034): Output port "VGA_G" at DE10_STD_FPGA.v(48) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+Warning (10034): Output port "VGA_R" at DE10_STD_FPGA.v(50) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+Warning (10034): Output port "DRAM_CAS_N" at DE10_STD_FPGA.v(34) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 34
+Warning (10034): Output port "DRAM_CKE" at DE10_STD_FPGA.v(35) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 35
+Warning (10034): Output port "DRAM_CLK" at DE10_STD_FPGA.v(36) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 36
+Warning (10034): Output port "DRAM_CS_N" at DE10_STD_FPGA.v(37) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 37
+Warning (10034): Output port "DRAM_LDQM" at DE10_STD_FPGA.v(39) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 39
+Warning (10034): Output port "DRAM_RAS_N" at DE10_STD_FPGA.v(40) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 40
+Warning (10034): Output port "DRAM_UDQM" at DE10_STD_FPGA.v(41) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 41
+Warning (10034): Output port "DRAM_WE_N" at DE10_STD_FPGA.v(42) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 42
+Warning (10034): Output port "VGA_BLANK_N" at DE10_STD_FPGA.v(45) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 45
+Warning (10034): Output port "VGA_CLK" at DE10_STD_FPGA.v(47) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 47
+Warning (10034): Output port "VGA_HS" at DE10_STD_FPGA.v(49) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 49
+Warning (10034): Output port "VGA_SYNC_N" at DE10_STD_FPGA.v(51) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 51
+Warning (10034): Output port "VGA_VS" at DE10_STD_FPGA.v(52) has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 52
+Info (12128): Elaborating entity "Debounce_ALL" for hierarchy "Debounce_ALL:u0" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 98
+Info (12128): Elaborating entity "Debounce" for hierarchy "Debounce_ALL:u0|Debounce:SW_Debounce[0].inst" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/Debounce_ALL.v Line: 13
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 38
+    Warning (13040): bidirectional pin "PS2_CLK" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 55
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 56
+    Warning (13040): bidirectional pin "PS2_DAT" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 57
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 58
+    Warning (13040): bidirectional pin "GPIO[0]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[1]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[2]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[3]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[4]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[5]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[6]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[7]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[8]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[9]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[10]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[11]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[12]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[13]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[14]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[15]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[16]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[17]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[18]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[19]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[20]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[21]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[22]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[23]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[24]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[25]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[26]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[27]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[28]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[29]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[30]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[31]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[32]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[33]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[34]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+    Warning (13040): bidirectional pin "GPIO[35]" has no driver File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 62
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 24
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 25
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 26
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 27
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 28
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 29
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 32
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 33
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 33
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 34
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 35
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 36
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 37
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 39
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 40
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 41
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 42
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 45
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 46
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 47
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 48
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 49
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 50
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 51
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 52
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 9
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: D:/DE10_Standard/Tool/SystemBuilder/CodeGenerated/DE10_Standard/DE10_STD_FPGA/DE10_STD_FPGA.v Line: 11
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 104 output pins
+    Info (21060): Implemented 56 bidirectional pins
+    Info (21061): Implemented 82 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 184 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Thu Jun 02 13:39:39 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
+
+

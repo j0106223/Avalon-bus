@@ -1,0 +1,6 @@
+DATE = "19:25:20 December 28, 2016"
+QUARTUS_VERSION = "16.0.0"
+
+# Revisions
+
+PROJECT_REVISION = "DE10_Standard_DRAM_RTL_Test"

@@ -1,0 +1,9 @@
+module Debounce_ALL
+(
+    input       clk,
+    input [9:0] iSW,
+    input [3:0] iKEY,
+    output oSW,
+    output oKEY
+);
+endmodule 

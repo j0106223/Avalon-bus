@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=F\:\\SVN\\de10_standard\\trunk\\test\\daisy\\DE10_Standard_Audio\\software\\DE10_Standard_Audio
+newSoftwareExampleWizardPage.sopcinfoFile=F\:\\SVN\\de10_standard\\trunk\\test\\daisy\\DE10_Standard_Audio\\audio_nios.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=F\:\\SVN\\de10_standard\\trunk\\test\\daisy\\DE10_Standard_Audio\\software\\DE10_Standard_Audio_bsp

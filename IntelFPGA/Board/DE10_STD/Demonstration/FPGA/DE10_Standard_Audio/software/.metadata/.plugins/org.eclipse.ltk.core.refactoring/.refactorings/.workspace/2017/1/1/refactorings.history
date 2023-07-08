@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;DE10_Standard_Audio/terasic_includes.h&apos;" deleteContents="false" description="Delete resource &apos;DE10_Standard_Audio/terasic_includes.h&apos;" element1="/DE10_Standard_Audio/terasic_includes.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1483433061690"/>
+</session>
