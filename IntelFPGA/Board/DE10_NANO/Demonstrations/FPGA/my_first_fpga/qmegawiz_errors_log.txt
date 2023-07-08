@@ -1,0 +1,31 @@
+
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 03PM:18:40>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 03PM:33:45>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 03PM:34:54>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 03PM:35:08>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 04PM:03:54>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+D:/SVN/de0_nan0_soc_hdmi/cd/system_cd/Demonstrations/FPGA/my_first_fpga/pll.v
+
+Apr 07 04PM:04:07>: Megafunction Altera PLL v14.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

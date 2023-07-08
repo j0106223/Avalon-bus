@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=E\:\\SVN\\DE10_NANO_SOC\\SoCFPGA\\DE10_NANO_SoC_Nios_Access_DDR3\\software\\nios_ddr3_test
+newSoftwareExampleWizardPage.sopcinfoFile=E\:\\SVN\\DE10_NANO_SOC\\SoCFPGA\\DE10_NANO_SoC_Nios_Access_DDR3\\soc_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=E\:\\SVN\\DE10_NANO_SOC\\SoCFPGA\\DE10_NANO_SoC_Nios_Access_DDR3\\software\\nios_ddr3_test_bsp

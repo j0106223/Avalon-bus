@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=G\:\\svn_2016\\de10-nano-i7-dev\\system_cd\\Demonstrations\\FPGA\\ADC\\software\\DE10_NANO_ADC
+newSoftwareExampleWizardPage.sopcinfoFile=G\:\\svn_2016\\de10-nano-i7-dev\\system_cd\\Demonstrations\\FPGA\\ADC\\DE10_NANO_QSYS.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=G\:\\svn_2016\\de10-nano-i7-dev\\system_cd\\Demonstrations\\FPGA\\ADC\\software\\DE10_NANO_ADC_bsp
