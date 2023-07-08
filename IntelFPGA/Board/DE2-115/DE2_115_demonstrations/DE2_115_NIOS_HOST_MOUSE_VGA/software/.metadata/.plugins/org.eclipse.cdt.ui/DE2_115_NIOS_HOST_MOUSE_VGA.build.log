@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project DE2_115_NIOS_HOST_MOUSE_VGA ****
+
+make all 
+Info: Building ../DE2_115_NIOS_HOST_MOUSE_VGA_bsp/
+make --no-print-directory -C ../DE2_115_NIOS_HOST_MOUSE_VGA_bsp/
+[BSP build complete]
+[DE2_115_NIOS_HOST_MOUSE_VGA build complete]

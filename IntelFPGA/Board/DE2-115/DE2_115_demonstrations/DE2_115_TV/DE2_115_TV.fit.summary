@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Nov 30 09:21:55 2012
+Quartus II 64-Bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Full Version
+Revision Name : DE2_115_TV
+Top-level Entity Name : DE2_115_TV
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 1,699 / 114,480 ( 1 % )
+    Total combinational functions : 1,397 / 114,480 ( 1 % )
+    Dedicated logic registers : 1,043 / 114,480 ( < 1 % )
+Total registers : 1043
+Total pins : 436 / 529 ( 82 % )
+Total virtual pins : 0
+Total memory bits : 45,024 / 3,981,312 ( 1 % )
+Embedded Multiplier 9-bit elements : 18 / 532 ( 3 % )
+Total PLLs : 1 / 4 ( 25 % )

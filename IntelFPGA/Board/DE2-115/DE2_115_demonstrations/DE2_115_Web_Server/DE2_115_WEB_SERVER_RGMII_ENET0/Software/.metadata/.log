@@ -1,0 +1,81 @@
+!SESSION 2012-11-23 11:38:34.159 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-23 11:40:31.862
+!MESSAGE Indexed 'web_server_bsp' (235 sources, 142 headers) in 4.62 sec: 9,652 declarations; 47,299 references; 188 unresolved inclusions; 8 syntax errors; 597 unresolved names (1.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-23 11:40:51.910
+!MESSAGE Indexed 'web_server' (6 sources, 16 headers) in 0.09 sec: 339 declarations; 1,803 references; 69 unresolved inclusions; 3 syntax errors; 255 unresolved names (10.64%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-23 11:59:00.698
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353639087]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-23 11:59:09.077
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353639087 /cygdrive/d/DE2_115_WEB_SERVER_RGMII_ENET0/Software/web_server/web_server.elf]
+!SESSION 2013-05-03 14:05:09.002 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data D:\project\de2-115\demo\web_server\DE2_115_WEB_SERVER_RGMII_ENET0\Software -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.epp.usagedata.recording 2 0 2013-05-03 14:05:41.278
+!MESSAGE The usage data upload server at http://udc.eclipse.org/upload.php could not be found.
+!STACK 0
+java.net.UnknownHostException: udc.eclipse.org
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader.doUpload(BasicUploader.java:206)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader.upload(BasicUploader.java:129)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader$1.run(BasicUploader.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.core 4 0 2013-05-03 14:06:55.834
+!MESSAGE Error executing 'nios2-bsp-generate-files --bsp-dir . --settings settings.bsp', unexpected return code 1.
+
+Error message:
+
+SEVERE: File not found: D:\DE2_115_WEB_SERVER_RGMII_ENET0\de2_115_WEB_Qsys.sopcinfo
+SEVERE: File not found: D:\DE2_115_WEB_SERVER_RGMII_ENET0\de2_115_WEB_Qsys.sopcinfo
+SEVERE: nios2-bsp-generate-files failed.
+
+
+!ENTRY com.altera.sbtgui.core 4 0 2013-05-03 14:07:28.760
+!MESSAGE Error executing 'nios2-bsp-generate-files --bsp-dir . --settings settings.bsp', unexpected return code 1.
+
+Error message:
+
+SEVERE: File not found: D:\DE2_115_WEB_SERVER_RGMII_ENET0\de2_115_WEB_Qsys.sopcinfo
+SEVERE: File not found: D:\DE2_115_WEB_SERVER_RGMII_ENET0\de2_115_WEB_Qsys.sopcinfo
+SEVERE: nios2-bsp-generate-files failed.
+
+!SESSION 2013-05-03 14:07:53.630 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-05-03 14:12:46.445
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353639087]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-05-03 14:12:49.990
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353639087 /cygdrive/d/project/de2-115/demo/web_server/DE2_115_WEB_SERVER_RGMII_ENET0/Software/web_server/web_server.elf]

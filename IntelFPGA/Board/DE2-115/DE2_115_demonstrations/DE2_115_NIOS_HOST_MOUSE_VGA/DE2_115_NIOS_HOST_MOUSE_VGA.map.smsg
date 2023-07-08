@@ -1,0 +1,8 @@
+Warning (10273): Verilog HDL warning at TERASIC_SRAM.v(46): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_lcd.v(61): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_sdram_test_component.v(236): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_sdram_test_component.v(237): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_sdram_test_component.v(238): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_sdram_test_component.v(239): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_NIOS_HOST_MOUSE_VGA.v(567): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_NIOS_HOST_MOUSE_VGA.v(568): extended using "x" or "z"

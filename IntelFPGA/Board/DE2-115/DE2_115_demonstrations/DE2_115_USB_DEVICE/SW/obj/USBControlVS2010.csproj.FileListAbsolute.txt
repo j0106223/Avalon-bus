@@ -1,0 +1,49 @@
+D:\SVN\RD\Wuhan_rd\USB\Template\bin\Debug\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\Template\bin\Debug\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\Template\bin\Debug\CyUSB.dll
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\ResolveAssemblyReference.cache
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\Template.Form1.resources
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\Template.Properties.Resources.resources
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\USBControlVS2010.csproj.GenerateResource.Cache
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\Template\obj\Debug\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Debug\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Debug\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Debug\CyUSB.dll
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\ResolveAssemblyReference.cache
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\Template.Form1.resources
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\Template.Properties.Resources.resources
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\USBControlVS2010.csproj.GenerateResource.Cache
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Debug\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Release\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Release\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Release\CyUSB.dll
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\ResolveAssemblyReference.cache
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.Form1.resources
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.Properties.Resources.resources
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\USBControlVS2010.csproj.GenerateResource.Cache
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.exe
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.pdb
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Release\Template.exe.manifest
+D:\SVN\RD\Wuhan_rd\USB\USBControl\bin\Release\Template.application
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.exe.manifest
+D:\SVN\RD\Wuhan_rd\USB\USBControl\obj\Release\Template.application
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Release\CyUSB.dll
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\ResolveAssemblyReference.cache
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\Template.Form1.resources
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\Template.Properties.Resources.resources
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\USBControlVS2010.csproj.GenerateResource.Cache
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Release\USB Control.exe
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Release\USB Control.pdb
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\USB Control.exe
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Release\USB Control.pdb
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Debug\USB Control.exe
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Debug\USB Control.pdb
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\bin\Debug\CyUSB.dll
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\ResolveAssemblyReference.cache
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\Template.Form1.resources
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\Template.Properties.Resources.resources
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\USBControlVS2010.csproj.GenerateResource.Cache
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\USB Control.exe
+D:\SVN\RD\Wuhan_rd\usb_device\USBControl\obj\Debug\USB Control.pdb

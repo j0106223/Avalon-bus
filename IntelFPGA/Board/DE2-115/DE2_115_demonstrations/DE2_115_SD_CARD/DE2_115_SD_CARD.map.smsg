@@ -1,0 +1,5 @@
+Warning (10273): Verilog HDL warning at DE2_115_SD_CARD_NIOS_lcd.v(61): extended using "x" or "z"
+Warning (10268): Verilog HDL information at AUDIO_IF.v(166): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at AUDIO_IF.v(182): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at de2_115_sd_card.v(561): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_sd_card.v(562): extended using "x" or "z"

@@ -1,0 +1,8 @@
+<sld_project_info>
+  <file_info>
+    <file checksum="0x00672F9F" device="EP4CE115F29C7" path="DE2_115_TV.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x710956D6" device="EPCS64" path="DE2_115_TV.pof" usercode="0x00000000"/>
+  </file_info>
+  <hub_info ir_width="0" node_count="0"/>
+  <node_info/>
+</sld_project_info>

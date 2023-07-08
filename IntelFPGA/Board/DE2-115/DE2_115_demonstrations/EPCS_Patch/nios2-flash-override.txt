@@ -1,0 +1,52 @@
+[EPCS-202011]  # EPCS1N (lead-free)
+sector_size = 32768
+sector_count = 4
+[EPCS-202013]  # EPCS4N (lead-free)
+sector_size = 65536
+sector_count = 8
+[EPCS-202015]  # EPCS16N (lead-free)
+sector_size = 65536
+sector_count = 32
+[EPCS-202017]  # EPCS64N (lead-free)
+sector_size = 65536
+sector_count = 128
+
+
+
+[EPCS-EF3013]  # EPCQ4ASI8N (lead-free)
+sector_size = 65536
+sector_count = 8
+
+[EPCS-20BA17]  # EPCQ64N (lead-free)
+sector_size = 65536
+sector_count = 128
+
+
+
+[EPCS-010216]  # EPCS64N (Spansion S25FL064)
+sector_size = 65536
+sector_count = 128
+[EPCS-012018]  # EPCS128 (Spansion S25FL128)
+sector_size = 262144
+sector_count = 64
+
+[EPCS-014015]  # EPCS16N (Spansion S25FL116K)
+sector_size = 65536
+sector_count = 32
+[EPCS-014016]  # EPCS32N (Spansion S25FL132K)
+sector_size = 65536
+sector_count = 64
+[EPCS-014017]  # EPCS64N (Spansion S25FL164K)
+sector_size = 65536
+sector_count = 128
+
+
+
+[EPCS-9D6017]  # EPCS64N (ISSI IS25LP064A)
+sector_size = 65536
+sector_count = 128
+
+[EPCS-9D6018]  # EPCS128 (ISSI IS25LP128-JMLE)
+sector_size = 262144
+sector_count = 64
+

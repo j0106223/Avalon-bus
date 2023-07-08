@@ -1,0 +1,116 @@
+!SESSION 2012-11-19 14:47:33.598 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-19 14:50:07.929
+!MESSAGE Indexed 'web_server_bsp' (235 sources, 176 headers) in 4.80 sec: 11,048 declarations; 48,453 references; 167 unresolved inclusions; 6 syntax errors; 633 unresolved names (1.05%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-19 14:50:09.499
+!MESSAGE Indexed 'web_server' (5 sources, 16 headers) in 0.11 sec: 338 declarations; 1,801 references; 66 unresolved inclusions; 3 syntax errors; 247 unresolved names (10.35%)
+!SESSION 2012-11-21 11:53:50.558 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:39:22.514
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:39:27.242
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:47:29.412
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:47:33.283
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:59:03.137
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 13:59:07.009
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:05:32.534
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:05:36.576
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:09:59.632
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:10:03.612
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:13:54.412
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:13:58.580
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:25:13.231
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:25:17.196
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+!SESSION 2012-11-21 14:49:36.424 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:55:50.891
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 14:55:55.210
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 15:04:02.455
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-21 15:04:06.513
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/c/Users/Administrator/Desktop/DE2_115_WEB_SERVER_MII_ENET0/Software/web_server/web_server.elf]
+!SESSION 2013-05-03 18:25:24.836 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.epp.usagedata.recording 2 0 2013-05-03 18:25:41.772
+!MESSAGE The usage data upload server at http://udc.eclipse.org/upload.php could not be found.
+!STACK 0
+java.net.UnknownHostException: udc.eclipse.org
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader.doUpload(BasicUploader.java:206)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader.upload(BasicUploader.java:129)
+	at org.eclipse.epp.usagedata.internal.recording.uploading.BasicUploader$1.run(BasicUploader.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-05-03 18:34:19.259
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0xb000140 --id=0x0 --timestamp=1353045137]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-05-03 18:34:22.818
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0xb000140 --id=0x0 --timestamp=1353045137 /cygdrive/d/project/de2-115/demo/web_server/a/Software/web_server/web_server.elf]

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_115_Default">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|VGA_Audio_PLL:p1|altpll:altpll_component" CBX_FILE_NAME="altpll_k3n2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_skd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_Default|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_b7d1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

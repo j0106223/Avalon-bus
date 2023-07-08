@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="303" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="154" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="374" />
+   <clocksource preferredWidth="374" />
+   <frequency preferredWidth="355" />
+  </columns>
+ </clocktable>
+ <window width="1600" height="860" x="0" y="0" />
+ <library
+   expandedCategories="Library/Clock and Reset,Library/PLL,Library/Bridges,Library,Project" />
+ <hdlexample language="VERILOG" />
+</preferences>

@@ -1,0 +1,9 @@
+Warning (10268): Verilog HDL information at AUDIO_IF.v(166): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at AUDIO_IF.v(182): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at DE2_115_SOPC_lcd.v(61): extended using "x" or "z"
+Warning (10037): Verilog HDL or VHDL warning at DE2_115_SOPC_cpu.v(2008): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at DE2_115_SOPC_cpu.v(2010): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at DE2_115_SOPC_cpu.v(2166): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at DE2_115_SOPC_cpu.v(3085): conditional expression evaluates to a constant
+Warning (10273): Verilog HDL warning at de2_115_sd_card_audio_player.v(546): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_sd_card_audio_player.v(547): extended using "x" or "z"

@@ -1,0 +1,55 @@
+
+**** Build of configuration Nios II for project usb_device ****
+
+make all 
+      0 [main] sh 5404 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] sh 5320 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] echo 9212 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../usb_device_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../usb_device_bsp/
+      0 [main] pwd 6340 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] sh 9684 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] sh 6988 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      0 [main] echo 3664 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Compiling cy7c67200_device/usb_device_control.c to obj/default/cy7c67200_device/usb_device_control.o
+the public mailing list cygwin@cygwin.com
+      0 [main] mkdir 8868 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+nios2-elf-gcc -xc -MP -MMD -c -I../usb_device_bsp//HAL/inc -I../usb_device_bsp/ -I../usb_device_bsp//drivers/inc -Icy7c67200_device  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/cy7c67200_device/usb_device_control.o cy7c67200_device/usb_device_control.c
+the public mailing list cygwin@cygwin.com
+cy7c67200_device/usb_device_control.c: In function 'sie2_msg_handler':
+cy7c67200_device/usb_device_control.c:167: warning: pointer targets in passing argument 3 of 'usb_send_data' differ in signedness
+cy7c67200_device/usb_device_control.c: In function 'check_button_sw_status':
+cy7c67200_device/usb_device_control.c:327: warning: pointer targets in passing argument 3 of 'usb_send_data' differ in signedness
+      0 [main] true 5888 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] echo 848 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Linking usb_device.elf
+the public mailing list cygwin@cygwin.com
+nios2-elf-g++  -T'../usb_device_bsp//linker.x' -msys-crt0='../usb_device_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../usb_device_bsp/   -Wl,-Map=usb_device.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o usb_device.elf obj/default/LCD.o obj/default/cy7c67200_device/usb_device.o obj/default/cy7c67200_device/usb_device_control.o obj/default/cy7c67200_device/usb_hal.o obj/default/main.o -lm 
+nios2-elf-insert usb_device.elf --thread_model hal --cpu_name cpu_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name DE2_115_Qsys --quartus_project_dir "E:/CD_Package/01-DE2-115/DE2-115_v.2.0.0_SystemCD/DE2_115_demonstrations/DE2_115_USB_DEVICE/HW" --jdi E:/CD_Package/01-DE2-115/DE2-115_v.2.0.0_SystemCD/DE2_115_demonstrations/DE2_115_USB_DEVICE/HW/software/usb_device_bsp/../../DE2_115_USB_DEVICE_LED.jdi --sopcinfo E:/CD_Package/01-DE2-115/DE2-115_v.2.0.0_SystemCD/DE2_115_demonstrations/DE2_115_USB_DEVICE/HW/software/usb_device_bsp/../../DE2_115_Qsys.sopcinfo
+      0 [main] sh 804 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] uname 9244 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] bash 6120 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Info: (usb_device.elf) 69 KBytes program size (code + initialized data).
+Info:                  130994 KBytes free for stack + heap.
+      0 [main] echo 9744 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Creating usb_device.objdump
+the public mailing list cygwin@cygwin.com
+nios2-elf-objdump --disassemble --syms --all-header --source usb_device.elf >usb_device.objdump
+      0 [main] sh 2560 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      0 [main] sh 3796 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[usb_device build complete]
+
+**** Build Finished ****

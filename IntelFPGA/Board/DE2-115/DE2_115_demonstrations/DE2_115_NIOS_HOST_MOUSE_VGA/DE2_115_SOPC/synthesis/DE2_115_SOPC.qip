@@ -1,0 +1,218 @@
+set_global_assignment -entity "DE2_115_SOPC" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "qsys"
+set_global_assignment -entity "DE2_115_SOPC" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1sp2"
+set_global_assignment -entity "DE2_115_SOPC" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -library "lib_DE2_115_SOPC" -name MISC_FILE [file join $::quartus(qip_path) ../../DE2_115_SOPC.sopcinfo]
+set_instance_assignment -entity "DE2_115_SOPC" -library "lib_DE2_115_SOPC" -name SLD_INFO "QSYS_NAME DE2_115_SOPC HAS_SOPCINFO 1 GENERATION_ID 1354258592"
+set_global_assignment -library "lib_DE2_115_SOPC" -name MISC_FILE [file join $::quartus(qip_path) ../../DE2_115_SOPC.qsys]
+
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) DE2_115_SOPC.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_irq_clock_crosser.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_irq_mapper.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_st_handshake_clock_crosser.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_st_clock_crosser.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_st_pipeline_base.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_width_adapter.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_burst_uncompressor.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_arbitrator.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_mux_002.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_demux_010.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cmd_xbar_demux_002.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_mux_001.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_mux.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_demux_003.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_rsp_xbar_demux.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cmd_xbar_mux.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cmd_xbar_demux_001.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cmd_xbar_demux.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_reset_controller.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_reset_synchronizer.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SDC_FILE [file join $::quartus(qip_path) submodules/altera_reset_controller.sdc]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_burst_adapter.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_traffic_limiter.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_id_router_010.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_addr_router_002.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_id_router_003.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_id_router_002.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_id_router.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_addr_router_001.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_addr_router.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_master_agent.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_sc_fifo.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_slave_agent.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_slave_translator.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) submodules/altera_merlin_master_translator.sv]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/CY7C67200_IF.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sysid.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu.ocp]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SDC_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu.sdc]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_bht_ram.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_dc_tag_ram.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_ic_tag_ram.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_jtag_debug_module_sysclk.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_jtag_debug_module_tck.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_jtag_debug_module_wrapper.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_mult_cell.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_ociram_default_contents.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_oci_test_bench.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_rf_ram_a.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_rf_ram_b.mif]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_cpu_test_bench.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_mm_clock_crossing_bridge.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_avalon_dc_fifo.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/altera_dcfifo_synchronizer_bundle.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/VGA_NIOS_CTRL.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/VGA_OSD_RAM.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/VGA_Controller.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/Img_RAM.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_timer_stamp.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_pll.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_jtag_uart.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_jtag_uart_input_mutex.dat]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_jtag_uart_input_stream.dat]
+set_global_assignment -library "lib_DE2_115_SOPC" -name SOURCE_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_jtag_uart_output_stream.dat]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/SEG7_IF.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/TERASIC_SRAM.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_lcd.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_ledr.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_ledg.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sw.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sma_out.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sma_in.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_key.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sdram.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_sdram_test_component.v]
+set_global_assignment -library "lib_DE2_115_SOPC" -name VERILOG_FILE [file join $::quartus(qip_path) submodules/DE2_115_SOPC_timer.v]
+
+set_global_assignment -entity "altera_irq_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_irq_clock_crosser"
+set_global_assignment -entity "altera_irq_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_irq_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_irq_mapper" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_irq_mapper"
+set_global_assignment -entity "DE2_115_SOPC_irq_mapper" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_irq_mapper" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_avalon_st_handshake_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_st_handshake_clock_crosser"
+set_global_assignment -entity "altera_avalon_st_handshake_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_avalon_st_handshake_clock_crosser" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_width_adapter"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_width_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_rsp_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_mux" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_cmd_xbar_demux" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_reset_controller" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_reset_controller" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_burst_adapter"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_burst_adapter" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_traffic_limiter"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_traffic_limiter" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_id_router_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_id_router_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_id_router_010" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_id_router_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_id_router_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_id_router_003" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_id_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_id_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_id_router_002" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_id_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_id_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_id_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_addr_router_001" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_addr_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "DE2_115_SOPC_addr_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_addr_router" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_master_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_slave_agent"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_merlin_master_translator" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_sysid" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_sysid_qsys"
+set_global_assignment -entity "DE2_115_SOPC_sysid" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_sysid" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_cpu" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_nios2_qsys"
+set_global_assignment -entity "DE2_115_SOPC_cpu" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_cpu" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "altera_avalon_mm_clock_crossing_bridge" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_mm_clock_crossing_bridge"
+set_global_assignment -entity "altera_avalon_mm_clock_crossing_bridge" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "altera_avalon_mm_clock_crossing_bridge" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_timer_stamp" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_timer"
+set_global_assignment -entity "DE2_115_SOPC_timer_stamp" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_timer_stamp" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_pll" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altpll"
+set_global_assignment -entity "DE2_115_SOPC_pll" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_pll" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_jtag_uart" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "DE2_115_SOPC_jtag_uart" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_jtag_uart" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_lcd" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_lcd_16207"
+set_global_assignment -entity "DE2_115_SOPC_lcd" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_lcd" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_ledr" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_ledr" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_ledr" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_ledg" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_ledg" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_ledg" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_sw" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_sw" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_sw" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_sma_out" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_sma_out" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_sma_out" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_sma_in" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_sma_in" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_sma_in" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_key" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "DE2_115_SOPC_key" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_key" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_sdram" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_new_sdram_controller"
+set_global_assignment -entity "DE2_115_SOPC_sdram" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_sdram" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"
+set_global_assignment -entity "DE2_115_SOPC_timer" -library "lib_DE2_115_SOPC" -name IP_TOOL_NAME "altera_avalon_timer"
+set_global_assignment -entity "DE2_115_SOPC_timer" -library "lib_DE2_115_SOPC" -name IP_TOOL_VERSION "11.1"
+set_global_assignment -entity "DE2_115_SOPC_timer" -library "lib_DE2_115_SOPC" -name IP_TOOL_ENV "qsys"

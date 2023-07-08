@@ -1,0 +1,10 @@
+Warning (10273): Verilog HDL warning at de2_115_WEB_Qsys_sdram_test_component.v(236): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_WEB_Qsys_sdram_test_component.v(237): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_WEB_Qsys_sdram_test_component.v(238): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_WEB_Qsys_sdram_test_component.v(239): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at de2_115_WEB_Qsys_lcd.v(61): extended using "x" or "z"
+Warning (10268): Verilog HDL information at AUDIO_IF.v(166): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at AUDIO_IF.v(182): always construct contains both blocking and non-blocking assignments
+Warning (10273): Verilog HDL warning at TERASIC_SRAM.v(46): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_WEB_SERVER.v(689): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at DE2_115_WEB_SERVER.v(690): extended using "x" or "z"

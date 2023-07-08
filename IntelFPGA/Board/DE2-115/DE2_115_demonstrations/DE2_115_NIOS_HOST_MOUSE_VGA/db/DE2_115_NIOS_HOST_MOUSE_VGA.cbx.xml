@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE2_115_NIOS_HOST_MOUSE_VGA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|VGA_NIOS_CTRL:vpg|img_index:img_index_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gfc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_bht_module:DE2_115_SOPC_cpu_bht|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_fsg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_dc_data_module:DE2_115_SOPC_cpu_dc_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_kdf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_dc_tag_module:DE2_115_SOPC_cpu_dc_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_fhg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_dc_victim_module:DE2_115_SOPC_cpu_dc_victim|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_r3d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_nios2_oci:the_DE2_115_SOPC_cpu_nios2_oci|DE2_115_SOPC_cpu_nios2_oci_im:the_DE2_115_SOPC_cpu_nios2_oci_im|DE2_115_SOPC_cpu_traceram_lpm_dram_bdp_component_module:DE2_115_SOPC_cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_0a02.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_nios2_oci:the_DE2_115_SOPC_cpu_nios2_oci|DE2_115_SOPC_cpu_nios2_ocimem:the_DE2_115_SOPC_cpu_nios2_ocimem|DE2_115_SOPC_cpu_ociram_lpm_dram_bdp_component_module:DE2_115_SOPC_cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_j882.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_register_bank_a_module:DE2_115_SOPC_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_fag1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_jtag_uart:jtag_uart|DE2_115_SOPC_jtag_uart_scfifo_w:the_DE2_115_SOPC_jtag_uart_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_mult_cell:the_DE2_115_SOPC_cpu_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_mgr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_jtag_uart:jtag_uart|DE2_115_SOPC_jtag_uart_scfifo_r:the_DE2_115_SOPC_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|VGA_NIOS_CTRL:vpg|VGA_OSD_RAM:u1|Img_RAM:u0|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0kq1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|altera_avalon_mm_clock_crossing_bridge:clock_crossing_io|altera_avalon_dc_fifo:cmd_fifo|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_ivc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_ic_data_module:DE2_115_SOPC_cpu_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_cjd1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_ic_tag_module:DE2_115_SOPC_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_q8h1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_mult_cell:the_DE2_115_SOPC_cpu_mult_cell|altmult_add:the_altmult_add_part_2" CBX_FILE_NAME="mult_add_ogr2.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|DE2_115_SOPC_cpu_register_bank_b_module:DE2_115_SOPC_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_gag1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|DE2_115_SOPC_cpu:cpu|lpm_add_sub:Add17" CBX_FILE_NAME="add_sub_qvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|altera_avalon_mm_clock_crossing_bridge:clock_crossing_io|altera_avalon_dc_fifo:rsp_fifo|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_c3d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE2_115_NIOS_HOST_MOUSE_VGA|DE2_115_SOPC:DE2_115_SOPC_inst|VGA_NIOS_CTRL:vpg|img_data:img_data_inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1tc1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

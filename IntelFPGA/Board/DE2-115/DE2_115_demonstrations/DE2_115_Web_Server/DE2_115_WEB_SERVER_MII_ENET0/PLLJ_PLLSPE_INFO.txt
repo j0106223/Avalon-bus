@@ -1,0 +1,5 @@
+PLL_Name	de2_115_WEB_Qsys:DE2_115_qsys_inst|de2_115_WEB_Qsys_altpll:altpll|de2_115_WEB_Qsys_altpll_altpll_ktn2:sd1|pll7
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+

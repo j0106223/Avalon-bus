@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 23 17:28:10 2012
+Quartus II 64-Bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Full Version
+Revision Name : de2_115_golden_sopc
+Top-level Entity Name : de2_115_golden_sopc
+Family : Cyclone IV E
+Total logic elements : 7,927
+    Total combinational functions : 6,435
+    Dedicated logic registers : 4,786
+Total registers : 4786
+Total pins : 480
+Total virtual pins : 0
+Total memory bits : 1,137,440
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1

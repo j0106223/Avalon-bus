@@ -1,0 +1,10 @@
+PLL_Name	DE2_115_SOPC:u0|DE2_115_SOPC_altpll:altpll|DE2_115_SOPC_altpll_altpll_ktn2:sd1|pll7
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	DE2_115_SOPC:u0|DE2_115_SOPC_altpll_audio:altpll_audio|DE2_115_SOPC_altpll_audio_altpll_lo32:sd1|pll7
+PLLJITTER	15
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,25 @@
+!SESSION 2012-11-15 12:03:40.762 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-15 12:05:16.793
+!MESSAGE Indexed 'DE2_115_SD_CARD_bsp' (91 sources, 69 headers) in 1.51 sec: 1,478 declarations; 4,858 references; 137 unresolved inclusions; 5 syntax errors; 264 unresolved names (4.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-11-15 12:05:21.959
+!MESSAGE Indexed 'DE2_115_SD_CARD' (1 sources, 13 headers) in 0.02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 12:07:29.453
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 12:07:32.755
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/Administrator/Desktop/DE2_115_SD_CARD/Software/DE2_115_SD_CARD/DE2_115_SD_CARD.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 12:09:27.212
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2012-11-15 12:09:30.230
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/12.0/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/c/Users/Administrator/Desktop/DE2_115_SD_CARD/Software/DE2_115_SD_CARD/DE2_115_SD_CARD.elf]

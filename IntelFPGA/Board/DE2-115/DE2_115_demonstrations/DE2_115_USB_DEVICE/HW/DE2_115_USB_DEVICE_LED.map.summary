@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 06 11:53:16 2012
+Quartus II 32-bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Full Version
+Revision Name : DE2_115_USB_DEVICE_LED
+Top-level Entity Name : DE2_115_USB_DEVICE_LED
+Family : Cyclone IV E
+Total logic elements : 4,314
+    Total combinational functions : 3,378
+    Dedicated logic registers : 2,714
+Total registers : 2714
+Total pins : 480
+Total virtual pins : 0
+Total memory bits : 47,888
+Embedded Multiplier 9-bit elements : 4
+Total PLLs : 1

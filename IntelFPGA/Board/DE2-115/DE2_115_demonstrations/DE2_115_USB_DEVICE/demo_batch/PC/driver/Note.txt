@@ -1,0 +1,31 @@
+Driver information:
+http://www.cypress.com/?rID=34870
+
+==========================
+      if neccessary 
+==========================
+Downloading latest driver from cypress.
+---
+Add 
+Terasic EZO USB =CyUsb, USB\VID_09fb&PID_0de2
+for this demo
+---
+like:
+[Device]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_XXXX&PID_XXXX
+Terasic EZO USB =CyUsb, USB\VID_09fb&PID_0de2
+
+;for windows 2000 non intel platforms
+[Device.NT]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_XXXX&PID_XXXX
+Terasic EZO USB =CyUsb, USB\VID_09fb&PID_0de2
+
+;for x86 platforms
+[Device.NTx86]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_XXXX&PID_XXXX
+Terasic EZO USB =CyUsb, USB\VID_09fb&PID_0de2
+
+;for x64 platforms
+[Device.NTamd64]
+;%VID_XXXX&PID_XXXX.DeviceDesc%=CyUsb, USB\VID_XXXX&PID_XXXX
+Terasic EZO USB =CyUsb, USB\VID_09fb&PID_0de2

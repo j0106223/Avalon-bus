@@ -1,0 +1,10 @@
+PLL_Name	audio_nios:nios_audio_ins|audio_nios_altpll:altpll|audio_nios_altpll_altpll_ktn2:sd1|pll7
+PLLJITTER	35
+PLLSPEmax	84
+PLLSPEmin	-53
+
+PLL_Name	audio_nios:nios_audio_ins|audio_nios_altpll_audio:altpll_audio|audio_nios_altpll_audio_altpll_7d42:sd1|pll7
+PLLJITTER	15
+PLLSPEmax	84
+PLLSPEmin	-53
+

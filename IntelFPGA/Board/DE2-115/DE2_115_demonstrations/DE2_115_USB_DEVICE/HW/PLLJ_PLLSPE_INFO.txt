@@ -1,0 +1,5 @@
+PLL_Name	SDRAM_PLL:PLL1|altpll:altpll_component|altpll_d3l2:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

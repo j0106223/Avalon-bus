@@ -1,0 +1,8 @@
+
+**** Build of configuration Nios II for project DE2_115_SD_Card_Audio_Player ****
+
+make all 
+Info: Building ../DE2_115_SD_Card_Audio_Player_bsp/
+make --no-print-directory -C ../DE2_115_SD_Card_Audio_Player_bsp/
+[BSP build complete]
+[DE2_115_SD_Card_Audio_Player build complete]

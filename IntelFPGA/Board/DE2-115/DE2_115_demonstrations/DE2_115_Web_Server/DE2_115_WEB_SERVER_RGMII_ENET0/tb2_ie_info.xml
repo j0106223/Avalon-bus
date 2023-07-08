@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--Created by Liquid XML 2008 (www.liquid-technologies.com) for Altera-->
+<ProgramExecution xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+	<QuartusExecution>
+		<AddressBits>64</AddressBits>
+		<ApplicationError>
+		<Bits>64</Bits>
+		<CommandLine>quartus_sh -t c:/altera/12.1/quartus/common/tcl/apps/pr_man/qpr_get_next_stage.tcl DE2_115_WEB_SERVER</CommandLine>
+		<ErrorMessage>Access Violation at 0X00000000100AEDBA</ErrorMessage>
+		<Line>0</Line>
+		<Platform>windows</Platform>
+		<SourceFile>unknown</SourceFile>
+		<StackTrace>
+	 0x100aedb9: tcl85 + 0xaedb9 (Tcl_NewStringObj + 0x79)
+	   0xe67543: ccl_atcl + 0x7543 (?tcl_updateStringProc@ATCL_OBJ@@KAXPEAUTcl_Obj@@@Z + 0x2c3)
+	 0x1000f607: tcl85 + 0xf607 (TclInvokeStringCommand + 0xc7)
+	 0x1001104e: tcl85 + 0x1104e (TclEvalObjvInternal + 0x32e)
+	 0x100596af: tcl85 + 0x596af (TclExecuteByteCode + 0xf9f)
+	 0x100581fe: tcl85 + 0x581fe (TclCompEvalObj + 0xee)
+	 0x10012ac1: tcl85 + 0x12ac1 (TclEvalObjEx + 0x361)
+	 0x1001debf: tcl85 + 0x1debf (Tcl_IfObjCmd + 0x2af)
+	 0x1001104e: tcl85 + 0x1104e (TclEvalObjvInternal + 0x32e)
+	 0x10011f2b: tcl85 + 0x11f2b (TclEvalEx + 0x88b)
+	 0x100a3058: tcl85 + 0xa3058 (Tcl_PkgRequireProc + 0x3d8)
+	 0x100a2ca0: tcl85 + 0xa2ca0 (Tcl_PkgRequireProc + 0x20)
+	 0x100a3e49: tcl85 + 0xa3e49 (Tcl_PackageObjCmd + 0x859)
+	 0x1001104e: tcl85 + 0x1104e (TclEvalObjvInternal + 0x32e)
+	 0x10011f2b: tcl85 + 0x11f2b (TclEvalEx + 0x88b)
+	 0x100126a9: tcl85 + 0x126a9 (Tcl_Eval + 0x29)
+	   0xe66d60: ccl_atcl + 0x6d60 (?atcl_tcl_eval@@YAHPEAUTcl_Interp@@AEBV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@@Z + 0x100)
+	   0xe8a5c2: ccl_atcl + 0x2a5c2 (?atcl_package_require@@YAHPEAUTcl_Interp@@PEBD1_N2@Z + 0x8f2)
+	  0x56f1e3e: comp_qexe + 0x11e3e (?get_command_line@QEXE_ARGS@@QEBAPEBDXZ + 0x13ce)
+	  0x56f599a: comp_qexe + 0x1599a (?qexe_process_cmdline_arguments@@YA_NPEAVQEXE_CMDLINE@@HPEAPEBD@Z + 0x4ca)
+	  0x56f5b91: comp_qexe + 0x15b91 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0xa1)
+	0x1400017f2: quartus_sh + 0x17f2
+	   0xd94d78: CCL_MSG + 0x4d78 (?msg_exe_fini@@YAXXZ + 0x58)
+	   0xd955bc: CCL_MSG + 0x55bc (?msg_exe_fini@@YAXXZ + 0x89c)
+	   0xb21a94: ccl_mem + 0x1a94 (??1MEM_SEGMENT_INTERNAL@@UEAA@XZ + 0x1a4)
+	   0xd961ef: CCL_MSG + 0x61ef (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0x8f)
+	0x140004d01: quartus_sh + 0x4d01
+	 0x7707652c: kernel32 + 0x1652c (BaseThreadInitThunk + 0xc)
+	 0x7776c520: ntdll + 0x2c520 (RtlUserThreadStart + 0x20)
+		</StackTrace>
+		<Subsystem>unknown</Subsystem>
+	</ApplicationError>
+	<Compilation>
+			<CompileID>0</CompileID>
+			<DeviceFamily/>
+			<IncrementalCompilation/>
+			<TopLevelEntityName/>
+		</Compilation>
+		<DateInvoked>2012/12/04 17:14:42</DateInvoked>
+		<ElapsedTime>3</ElapsedTime>
+		<IP>192.168.21.152</IP>
+		<IsInternal>false</IsInternal>
+		<IsQt>false</IsQt>
+		<License>
+			<Edition>Full Version</Edition>
+			<LicenseHostID>0018f3ca7326</LicenseHostID>
+		</License>
+		<Machine>
+			<CPUCountLogical>2</CPUCountLogical>
+			<CPUCountPhysical>1</CPUCountPhysical>
+			<CPUSpeed>2933</CPUSpeed>
+			<Hostname>st01PC</Hostname>
+			<NIC>
+				<Address>e0cb4ec81676</Address>
+			</NIC>
+			<OS>Windows 7</OS>
+			<OSAddressBits>64</OSAddressBits>
+			<OSVersion>6.1</OSVersion>
+			<Platform>windows</Platform>
+			<ScreenResolution>unknown</ScreenResolution>
+			<TotalPhysicalRAM>4061</TotalPhysicalRAM>
+			<TotalVirtualRAM>4059</TotalVirtualRAM>
+		</Machine>
+		<Name>quartus_sh</Name>
+		<PeakMemoryUsed>0</PeakMemoryUsed>
+		<ProjectRevision>
+			<ProjectName/>
+			<Revision/>
+		</ProjectRevision>
+		<QuartusInstallation>
+			<InstallationID>0</InstallationID>
+			<Version>
+				<Build>177</Build>
+				<BuildSite>SJ</BuildSite>
+				<BuildSuffix/>
+				<Edition>Full Version</Edition>
+				<ServicePack>0</ServicePack>
+				<VersionNumber>12.1</VersionNumber>
+			</Version>
+		</QuartusInstallation>
+		<QuartusUser>
+			<AlteraUserName/>
+			<FAEContactName/>
+			<TalkbackStatus>
+				<DateSet/>
+				<TalkbackOn>true</TalkbackOn>
+			</TalkbackStatus>
+			<UserID>247163804718710.134157041100336</UserID>
+			<UserName>Administrator</UserName>
+		</QuartusUser>
+	</QuartusExecution>
+	<SchemaVersion>schema_2011-12-20</SchemaVersion>
+</ProgramExecution>
+
