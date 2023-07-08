@@ -1,0 +1,6 @@
+16:12:00 **** Clean-only build of configuration Nios II for project DE1_SoC_Audio_bsp ****
+make clean 
+[BSP clean complete]
+
+16:12:00 Build Finished (took 288ms)
+

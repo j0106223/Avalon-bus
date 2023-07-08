@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="VGA_Audio_sim/VGA_Audio.vo" type="VERILOG" />
+ <topLevel name="VGA_Audio" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

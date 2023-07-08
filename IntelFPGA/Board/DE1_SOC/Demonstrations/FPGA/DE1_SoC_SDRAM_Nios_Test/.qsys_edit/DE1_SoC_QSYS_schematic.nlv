@@ -1,0 +1,25 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst DE1_SoC_QSYS.onchip_memory2 -pg 1 -lvl 2 -y 630
+preplace inst DE1_SoC_QSYS.clk_50 -pg 1 -lvl 1 -y 50
+preplace inst DE1_SoC_QSYS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst DE1_SoC_QSYS.jtag_uart -pg 1 -lvl 2 -y 310
+preplace inst DE1_SoC_QSYS.pll -pg 1 -lvl 2 -y 30
+preplace inst DE1_SoC_QSYS.sdram -pg 1 -lvl 2 -y 130
+preplace inst DE1_SoC_QSYS.key -pg 1 -lvl 2 -y 510
+preplace inst DE1_SoC_QSYS.sysid_qsys -pg 1 -lvl 2 -y 230
+preplace inst DE1_SoC_QSYS.timer -pg 1 -lvl 2 -y 410
+preplace inst DE1_SoC_QSYS.nios2_qsys -pg 1 -lvl 1 -y 390
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(MASTER)nios2_qsys.d_irq,(SLAVE)key.irq,(SLAVE)timer.irq,(SLAVE)jtag_uart.irq) 1 1 1 510
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)DE1_SoC_QSYS.pll_locked,(SLAVE)pll.locked) 1 0 2 NJ 40 NJ
+preplace netloc FAN_OUT<net_container>DE1_SoC_QSYS</net_container>(MASTER)pll.outclk0,(SLAVE)timer.clk,(SLAVE)onchip_memory2.clk1,(SLAVE)sysid_qsys.clk,(SLAVE)key.clk,(SLAVE)jtag_uart.clk,(SLAVE)nios2_qsys.clk,(SLAVE)sdram.clk) 1 0 3 200 520 530 120 720
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(MASTER)pll.outclk1,(MASTER)DE1_SoC_QSYS.clk_sdram) 1 2 1 N
+preplace netloc INTERCONNECT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)sysid_qsys.reset,(SLAVE)onchip_memory2.reset1,(SLAVE)timer.reset,(SLAVE)sdram.reset,(MASTER)nios2_qsys.jtag_debug_module_reset,(SLAVE)pll.reset,(SLAVE)key.reset,(SLAVE)jtag_uart.reset,(SLAVE)nios2_qsys.reset_n,(MASTER)clk_50.clk_reset) 1 0 2 220 560 490
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)key.external_connection,(SLAVE)DE1_SoC_QSYS.key_external_connection) 1 0 2 NJ 540 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)clk_50.clk_in_reset,(SLAVE)DE1_SoC_QSYS.reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>DE1_SoC_QSYS</net_container>(MASTER)clk_50.clk,(SLAVE)pll.refclk) 1 1 1 N
+preplace netloc INTERCONNECT<net_container>DE1_SoC_QSYS</net_container>(MASTER)nios2_qsys.data_master,(SLAVE)sdram.s1,(MASTER)nios2_qsys.instruction_master,(SLAVE)key.s1,(SLAVE)sysid_qsys.control_slave,(SLAVE)nios2_qsys.jtag_debug_module,(SLAVE)onchip_memory2.s1,(SLAVE)timer.s1,(SLAVE)jtag_uart.avalon_jtag_slave) 1 0 2 180 580 470
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)sdram.wire,(SLAVE)DE1_SoC_QSYS.sdram_wire) 1 0 2 NJ 200 NJ
+preplace netloc EXPORT<net_container>DE1_SoC_QSYS</net_container>(SLAVE)clk_50.clk_in,(SLAVE)DE1_SoC_QSYS.clk) 1 0 1 NJ
+levelinfo -pg 1 0 150 830
+levelinfo -hier DE1_SoC_QSYS 160 250 570 740

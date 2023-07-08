@@ -1,0 +1,70 @@
+!SESSION 2013-09-03 11:22:22.995 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-03 11:23:48.080
+!MESSAGE Indexed 'DE1_SoC_Audio_bsp' (81 sources, 60 headers) in 2.76 sec: 951 declarations; 2,354 references; 117 unresolved inclusions; 5 syntax errors; 197 unresolved names (5.63%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-03 11:24:43.910
+!MESSAGE Indexed 'DE1_SoC_Audio' (0 sources, 13 headers) in 0.01 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.core 4 0 2013-09-03 11:26:19.104
+!MESSAGE Error executing 'nios2-bsp-generate-files --bsp-dir . --settings settings.bsp', unexpected return code 1.
+
+Error message:
+
+SEVERE: File not found: ..\..\DE1_SoC_Audio\audio_nios.sopcinfo
+SEVERE: File not found: ..\..\DE1_SoC_Audio\audio_nios.sopcinfo
+SEVERE: nios2-bsp-generate-files failed.
+
+!SESSION 2013-09-16 17:04:46.668 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2013-09-16 17:05:07.104
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 5773 milliseconds.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-09-16 17:06:19.168
+!MESSAGE Indexed 'DE1_SoC_Audio' (6 sources, 102 headers) in 0.83 sec: 4,288 declarations; 4,934 references; 0 unresolved inclusions; 2 syntax errors; 6 unresolved names (0.07%)
+!SESSION 2013-11-07 15:07:11.819 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2013-11-07 15:07:32.320
+!MESSAGE Usage data upload to http://udc.eclipse.org/upload.php failed with error code 404.
+
+!ENTRY org.eclipse.core.jobs 2 2 2013-11-07 15:11:14.616
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob$ProgressUpdateJob
+!SESSION 2016-08-17 16:11:04.095 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization J:/altera/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -data K:\SVN\DE1_SoC\CD_HW_revF\DE1_SoC_Audio\software -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization J:/altera/16.0/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-17 16:11:09.097
+!MESSAGE Indexed 'DE1_SoC_Audio' (6 sources, 8 headers) in 0.88 sec: 413 declarations; 1,171 references; 18 unresolved inclusions; 0 syntax errors; 160 unresolved names (9.17%)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-17 16:11:09.907
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-08-17 16:11:14.684
+!MESSAGE Indexed 'DE1_SoC_Audio_bsp' (164 sources, 266 headers) in 1.52 sec: 6,509 declarations; 11,428 references; 0 unresolved inclusions; 5 syntax errors; 47 unresolved names (0.26%)

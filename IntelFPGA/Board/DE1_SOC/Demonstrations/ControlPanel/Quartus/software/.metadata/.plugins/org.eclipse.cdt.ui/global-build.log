@@ -1,0 +1,20 @@
+
+**** Build of configuration Nios II for project ControlPanel ****
+
+make mem_init_generate 
+Info: Building ../ControlPanel_bsp/
+make --no-print-directory -C ../ControlPanel_bsp/
+[BSP build complete]
+Post-processing to create mem_init/DE1_SoC_QSYS_onchip_memory2.hex...
+bash -c 'elf2hex ControlPanel.elf 0x00080000 0x000a70ff --width=32 \
+		--little-endian-mem --create-lanes=0  mem_init/DE1_SoC_QSYS_onchip_memory2.hex'
+Post-processing to create mem_init/hdl_sim/DE1_SoC_QSYS_onchip_memory2.dat...
+bash -c 'elf2dat --infile=ControlPanel.elf --outfile=mem_init/hdl_sim/DE1_SoC_QSYS_onchip_memory2.dat \
+		--base=0x00080000 --end=0x000a70ff --width=32 \
+		--little-endian-mem --create-lanes=0 '
+Post-processing to create mem_init/hdl_sim/DE1_SoC_QSYS_onchip_memory2.sym...
+nios2-elf-nm -n ControlPanel.elf > mem_init/hdl_sim/DE1_SoC_QSYS_onchip_memory2.sym
+Post-processing to create mem_init/meminit.spd...
+Post-processing to create mem_init/meminit.qip...
+
+**** Build Finished ****

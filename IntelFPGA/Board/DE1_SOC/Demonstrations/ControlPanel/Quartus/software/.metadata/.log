@@ -1,0 +1,473 @@
+!SESSION 2013-10-10 23:16:03.266 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-10 23:16:03.920
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2013-10-10 23:16:31.543 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data D:\svn2\DE1_SoC\DE1_SOC_ControlPanel\software -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-10 23:16:32.215
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-10-10 23:17:03.006
+!MESSAGE Indexed 'ControlPanel_bsp' (87 sources, 66 headers) in 1.11 sec: 1,106 declarations; 3,030 references; 124 unresolved inclusions; 5 syntax errors; 232 unresolved names (5.31%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-10-10 23:17:04.941
+!MESSAGE Indexed 'ControlPanel' (1 sources, 13 headers) in 0.02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-10 23:29:37.417
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381413687]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-10 23:29:39.237
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381413687 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 00:07:45.510
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381419238]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 00:07:47.317
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381419238 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 00:10:54.704
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381419238]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 00:10:56.893
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381419238 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:08:04.792
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381423337]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:08:06.631
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381423337 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:10:24.196
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:10:24.935
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381423337]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:10:27.160
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381423337 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:37:15.669
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:37:17.508
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:07.521
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:08.153
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:10.475
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:51.719
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:52.608
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:38:55.809
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:40:22.125
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:40:25.284
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:12.690
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:13.613
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:16.827
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:56.416
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:57.120
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:41:59.457
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:42:41.143
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:42:41.734
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:42:43.927
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:04.180
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:06.497
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:30.606
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:31.242
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:33.468
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:51.870
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:52.499
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:43:54.692
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:44:16.695
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:44:17.710
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 01:44:19.918
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 08:31:13.476
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 08:31:15.315
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 08:31:30.183
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 08:31:30.686
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381425277]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 08:31:32.527
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381425277 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-10-11 09:16:02.333
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1381452074", expected: "1381425277".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-10-11 09:16:02.336
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System timestamp mismatch - connected: "1381452074", expected: "1381425277".
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:631)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:18:06.731
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381452074]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:18:08.601
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381452074 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:18:37.494
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:18:38.001
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381452074]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:18:39.858
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381452074 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+!SESSION 2013-10-11 09:22:23.273 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 09:22:23.869
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-10-11 09:22:26.626
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-10-11 09:51:21.305 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 09:51:24.693
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:59:30.682
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381452074]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 09:59:32.704
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381452074 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:45:51.969
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381463050]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:45:53.788
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381463050 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-10-11 12:46:28.068
+!MESSAGE Indexed 'ControlPanel' (4 sources, 101 headers) in 1.87 sec: 3,761 declarations; 4,321 references; 0 unresolved inclusions; 2 syntax errors; 6 unresolved names (0.07%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:46:49.671
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381463050]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:46:51.490
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381463050 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:47:09.403
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:47:09.901
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381463050]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 12:47:11.726
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381463050 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+!SESSION 2013-10-11 14:28:05.407 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 14:28:07.471
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-10-11 14:28:10.792
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:38:38.115
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381467020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:38:39.891
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381467020 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:39:09.558
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:39:09.870
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381467020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:39:11.507
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381467020 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:40:20.593
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381467020]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 14:40:22.226
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381467020 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:09:54.330
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381473902]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:09:55.961
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381473902 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:48:31.166
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381475891]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:48:32.798
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381475891 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:48:57.275
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381475891]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:48:58.911
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381475891 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:49:31.617
+!MESSAGE Terminated Launch with connection: 10DE-SoC on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:49:31.926
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --stop --sidp=0x60000b0 --id=0x0 --timestamp=1381475891]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-11 15:49:33.562
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=DE-SoC on localhost [USB-1]' --device=1 --instance=0 --go --sidp=0x60000b0 --id=0x0 --timestamp=1381475891 /cygdrive/d/svn2/DE1_SoC/DE1_SOC_ControlPanel/software/ControlPanel/ControlPanel.elf]
+!SESSION 2013-10-11 16:47:36.814 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 16:47:37.492
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2013-10-11 19:28:10.530 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 19:28:11.151
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2013-10-11 19:55:46.701 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2013-10-11 19:55:47.313
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.p2.reconciler.dropins_1.1.100.v20110815-1419 [152]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.p2.touchpoint.eclipse; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1327)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1311)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:389)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1131)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)

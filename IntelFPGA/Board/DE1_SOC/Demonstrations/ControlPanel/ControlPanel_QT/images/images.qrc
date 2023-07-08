@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/new/Myresource">
+        <file>BUTTON_DOWN.bmp</file>
+        <file>BUTTON_UP.bmp</file>
+        <file>SW_down.bmp</file>
+        <file>SW_up.bmp</file>
+        <file>HEX_0.bmp</file>
+        <file>HEX_1.bmp</file>
+        <file>HEX_2.bmp</file>
+        <file>HEX_3.bmp</file>
+        <file>HEX_4.bmp</file>
+        <file>HEX_5.bmp</file>
+        <file>HEX_6.bmp</file>
+        <file>HEX_7.bmp</file>
+        <file>HEX_8.bmp</file>
+        <file>HEX_9.bmp</file>
+        <file>HEX_a.bmp</file>
+        <file>HEX_b.bmp</file>
+        <file>HEX_c.bmp</file>
+        <file>HEX_d.bmp</file>
+        <file>HEX_e.bmp</file>
+        <file>HEX_f.bmp</file>
+        <file>IR_RX.bmp</file>
+        <file>SMALL_BUTTON_DOWN.bmp</file>
+        <file>SMALL_BUTTON_UP.bmp</file>
+        <file>RLED.bmp</file>
+        <file>GLED.bmp</file>
+        <file>tab/G-Sensor.png</file>
+        <file>tab/IRDA.png</file>
+        <file>tab/VGA.png</file>
+        <file>tab/Video.png</file>
+        <file>tab/movie.png</file>
+    </qresource>
+</RCC>

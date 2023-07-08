@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>462</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string extracomment="Developed by Richard">DE1-SoC Control Panel</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>32</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="movable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tabLED">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/GLED.bmp</normaloff>:/new/Myresource/GLED.bmp</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>LED</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_fpga_led">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>20</y>
+         <width>221</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>FPGA LED</string>
+       </property>
+       <widget class="QCheckBox" name="checkBox_LED1">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>60</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED1</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED9">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>150</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED9</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED0">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>30</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED0</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED2">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>90</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED2</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED3">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>120</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED3</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED4">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>150</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED4</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED5">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>30</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED5</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED6">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>60</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED6</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED7">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>90</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED7</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_LED8">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>120</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED8</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/RLED.bmp</normaloff>:/new/Myresource/RLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_hps_led">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>20</y>
+         <width>121</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>HPS LED</string>
+       </property>
+       <widget class="QCheckBox" name="checkBox_HPS_LED0">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>95</width>
+          <height>35</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <strikeout>false</strikeout>
+          <kerning>false</kerning>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>LED0</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images/images.qrc">
+          <normaloff>:/new/Myresource/GLED.bmp</normaloff>:/new/Myresource/GLED.bmp</iconset>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButton_LightAllLed">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>140</y>
+         <width>80</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Light All</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_UnlightAllLed">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>170</y>
+         <width>80</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Unlight All</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabHEX">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/HEX_8.bmp</normaloff>:/new/Myresource/HEX_8.bmp</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>HEX</string>
+      </attribute>
+      <widget class="QLabel" name="label_hex0">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_0.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex0">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_hex1">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_1.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex1">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex3">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_hex2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_2.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_hex3">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_3.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex5">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_hex4">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_4.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_hex5">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>70</y>
+         <width>40</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/HEX_5.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="spinBox_hex4">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>130</y>
+         <width>40</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabButton">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/BUTTON_UP.bmp</normaloff>:/new/Myresource/BUTTON_UP.bmp</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Button</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>10</y>
+         <width>41</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>HPS</string>
+       </property>
+       <widget class="QLabel" name="label_hps_key0">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>21</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/SMALL_BUTTON_DOWN.bmp</pixmap>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>340</width>
+         <height>210</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>FPGA</string>
+       </property>
+       <widget class="QLabel" name="label_key0">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>50</y>
+          <width>44</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/BUTTON_UP.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_key1">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>50</y>
+          <width>44</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/BUTTON_UP.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_key2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>50</y>
+          <width>44</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/BUTTON_UP.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_key3">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>50</y>
+          <width>44</width>
+          <height>44</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/BUTTON_UP.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_sw0">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>120</y>
+          <width>19</width>
+          <height>63</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_sw1">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>120</y>
+          <width>19</width>
+          <height>63</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_sw2">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>120</y>
+          <width>19</width>
+          <height>63</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_sw3">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw5">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw4">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw6">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw8">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw7">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sw9">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>130</y>
+         <width>19</width>
+         <height>63</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images/images.qrc">:/new/Myresource/SW_down.bmp</pixmap>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabGsensor">
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/tab/G-Sensor.png</normaloff>:/new/Myresource/tab/G-Sensor.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>G-Sensor</string>
+      </attribute>
+      <widget class="QLabel" name="label_Z">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>87</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Z: xxxx.xxx</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_X">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>87</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>X: xxxx.xxx</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_Y">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>120</y>
+         <width>87</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Y: xxxx.xxx</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabVideoIn">
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/tab/movie.png</normaloff>:/new/Myresource/tab/movie.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Video-In</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tabIR">
+      <attribute name="icon">
+       <iconset resource="images/images.qrc">
+        <normaloff>:/new/Myresource/tab/IRDA.png</normaloff>:/new/Myresource/tab/IRDA.png</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>IR</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_IR_RX">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>10</y>
+         <width>161</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>RX</string>
+       </property>
+       <widget class="QLabel" name="label_ir_controller">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>95</width>
+          <height>159</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="images/images.qrc">:/new/Myresource/IR_RX.bmp</pixmap>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images/images.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>checkBox_HPS_LED0</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>302</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED9</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>210</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED0</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>107</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>81</x>
+     <y>349</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED1</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED2</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>71</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED3</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED4</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>50</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED5</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>164</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED6</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED7</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>496</x>
+     <y>163</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_LED8</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>ClickLED()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>162</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot1()</slot>
+  <slot>ClickLED()</slot>
+  <slot>ClickHEX()</slot>
+  <slot>clickHEX(int)</slot>
+ </slots>
+</ui>

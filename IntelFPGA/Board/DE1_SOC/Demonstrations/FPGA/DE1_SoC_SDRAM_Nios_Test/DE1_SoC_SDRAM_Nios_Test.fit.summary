@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Aug 17 14:29:03 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : DE1_SoC_SDRAM_Nios_Test
+Top-level Entity Name : DE1_SoC_SDRAM_Nios_Test
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 2,046 / 32,070 ( 6 % )
+Total registers : 2898
+Total pins : 241 / 457 ( 53 % )
+Total virtual pins : 0
+Total block memory bits : 1,089,408 / 4,065,280 ( 27 % )
+Total RAM Blocks : 144 / 397 ( 36 % )
+Total DSP Blocks : 3 / 87 ( 3 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

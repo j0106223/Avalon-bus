@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Sep 06 11:35:34 2016
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : DE1_SOC_Linux_FB
+Top-level Entity Name : DE1_SOC_Linux_FB
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 4,181 / 32,070 ( 13 % )
+Total registers : 7309
+Total pins : 368 / 457 ( 81 % )
+Total virtual pins : 0
+Total block memory bits : 61,534 / 4,065,280 ( 2 % )
+Total RAM Blocks : 15 / 397 ( 4 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 6 ( 33 % )
+Total DLLs : 1 / 4 ( 25 % )

@@ -1,0 +1,595 @@
+Analysis & Synthesis report for DE1_SoC_PS2_DEMO
+Tue Aug 23 16:33:34 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DE1_SoC_PS2_DEMO|ps2:U1|cur_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: ps2:U1
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Aug 23 16:33:34 2016           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; DE1_SoC_PS2_DEMO                                ;
+; Top-level Entity Name           ; DE1_SoC_PS2_DEMO                                ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 99                                              ;
+; Total pins                      ; 241                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; DE1_SoC_PS2_DEMO   ; DE1_SoC_PS2_DEMO   ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; ps2.v                            ; yes             ; User Verilog HDL File        ; F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v              ;         ;
+; SEG7_LUT.v                       ; yes             ; User Verilog HDL File        ; F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/SEG7_LUT.v         ;         ;
+; de1_soc_ps2_demo.v               ; yes             ; Auto-Found Verilog HDL File  ; F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimate of Logic utilization (ALMs needed) ; 58                ;
+;                                             ;                   ;
+; Combinational ALUT usage for logic          ; 100               ;
+;     -- 7 input functions                    ; 0                 ;
+;     -- 6 input functions                    ; 3                 ;
+;     -- 5 input functions                    ; 5                 ;
+;     -- 4 input functions                    ; 36                ;
+;     -- <=3 input functions                  ; 56                ;
+;                                             ;                   ;
+; Dedicated logic registers                   ; 99                ;
+;                                             ;                   ;
+; I/O pins                                    ; 241               ;
+;                                             ;                   ;
+; Total DSP Blocks                            ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; ps2:U1|ps2_clk_in ;
+; Maximum fan-out                             ; 52                ;
+; Total fan-out                               ; 975               ;
+; Average fan-out                             ; 1.25              ;
++---------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name      ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+; |DE1_SoC_PS2_DEMO          ; 100 (0)           ; 99 (0)       ; 0                 ; 0          ; 241  ; 0            ; |DE1_SoC_PS2_DEMO                    ; DE1_SoC_PS2_DEMO ; work         ;
+;    |ps2:U1|                ; 100 (72)          ; 99 (99)      ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_PS2_DEMO|ps2:U1             ; ps2              ; work         ;
+;       |SEG7_LUT:U1|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_PS2_DEMO|ps2:U1|SEG7_LUT:U1 ; SEG7_LUT         ; work         ;
+;       |SEG7_LUT:U2|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_PS2_DEMO|ps2:U1|SEG7_LUT:U2 ; SEG7_LUT         ; work         ;
+;       |SEG7_LUT:U3|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_PS2_DEMO|ps2:U1|SEG7_LUT:U3 ; SEG7_LUT         ; work         ;
+;       |SEG7_LUT:U4|        ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC_PS2_DEMO|ps2:U1|SEG7_LUT:U4 ; SEG7_LUT         ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------+
+; State Machine - |DE1_SoC_PS2_DEMO|ps2:U1|cur_state                                             ;
++-------------------+-----------------+-------------------+-------------------+------------------+
+; Name              ; cur_state.trans ; cur_state.pulldat ; cur_state.pullclk ; cur_state.listen ;
++-------------------+-----------------+-------------------+-------------------+------------------+
+; cur_state.listen  ; 0               ; 0                 ; 0                 ; 0                ;
+; cur_state.pullclk ; 0               ; 0                 ; 1                 ; 1                ;
+; cur_state.pulldat ; 0               ; 1                 ; 0                 ; 1                ;
+; cur_state.trans   ; 1               ; 0                 ; 0                 ; 1                ;
++-------------------+-----------------+-------------------+-------------------+------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ps2:U1|dout_reg[9]                    ; Stuck at GND due to stuck port data_in ;
+; ps2:U1|cur_state~4                    ; Lost fanout                            ;
+; ps2:U1|cur_state~5                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 99    ;
+; Number of registers using Synchronous Clear  ; 11    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 29    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 51    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2:U1 ;
++----------------+-----------+------------------------+
+; Parameter Name ; Value     ; Type                   ;
++----------------+-----------+------------------------+
+; enable_byte    ; 011110100 ; Unsigned Binary        ;
+; listen         ; 00        ; Unsigned Binary        ;
+; pullclk        ; 01        ; Unsigned Binary        ;
+; pulldat        ; 10        ; Unsigned Binary        ;
+; trans          ; 11        ; Unsigned Binary        ;
++----------------+-----------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 99                          ;
+;     CLR               ; 10                          ;
+;     ENA               ; 32                          ;
+;     ENA CLR           ; 19                          ;
+;     SCLR              ; 11                          ;
+;     plain             ; 27                          ;
+; arriav_io_obuf        ; 96                          ;
+; arriav_lcell_comb     ; 106                         ;
+;     arith             ; 32                          ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 17                          ;
+;     normal            ; 74                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 36                          ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 3                           ;
+; boundary_port         ; 241                         ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.91                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Tue Aug 23 16:33:09 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC_PS2_DEMO -c DE1_SoC_PS2_DEMO
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ps2.v
+    Info (12023): Found entity 1: ps2 File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file seg7_lut.v
+    Info (12023): Found entity 1: SEG7_LUT File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/SEG7_LUT.v Line: 1
+Warning (12125): Using design file de1_soc_ps2_demo.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DE1_SoC_PS2_DEMO File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 36
+Info (12127): Elaborating entity "DE1_SoC_PS2_DEMO" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at de1_soc_ps2_demo.v(211): object "action" assigned a value but never read File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 211
+Warning (10034): Output port "DRAM_ADDR" at de1_soc_ps2_demo.v(65) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+Warning (10034): Output port "DRAM_BA" at de1_soc_ps2_demo.v(66) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 66
+Warning (10034): Output port "HEX4" at de1_soc_ps2_demo.v(102) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+Warning (10034): Output port "HEX5" at de1_soc_ps2_demo.v(105) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+Warning (10034): Output port "LEDR[9..3]" at de1_soc_ps2_demo.v(171) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+Warning (10034): Output port "VGA_B" at de1_soc_ps2_demo.v(190) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+Warning (10034): Output port "VGA_G" at de1_soc_ps2_demo.v(193) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+Warning (10034): Output port "VGA_R" at de1_soc_ps2_demo.v(195) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+Warning (10034): Output port "ADC_CONVST" at de1_soc_ps2_demo.v(39) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 39
+Warning (10034): Output port "ADC_DIN" at de1_soc_ps2_demo.v(40) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 40
+Warning (10034): Output port "ADC_SCLK" at de1_soc_ps2_demo.v(42) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 42
+Warning (10034): Output port "AUD_DACDAT" at de1_soc_ps2_demo.v(48) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 48
+Warning (10034): Output port "AUD_XCK" at de1_soc_ps2_demo.v(50) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 50
+Warning (10034): Output port "DRAM_CAS_N" at de1_soc_ps2_demo.v(67) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 67
+Warning (10034): Output port "DRAM_CKE" at de1_soc_ps2_demo.v(68) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 68
+Warning (10034): Output port "DRAM_CLK" at de1_soc_ps2_demo.v(69) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 69
+Warning (10034): Output port "DRAM_CS_N" at de1_soc_ps2_demo.v(70) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 70
+Warning (10034): Output port "DRAM_LDQM" at de1_soc_ps2_demo.v(72) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 72
+Warning (10034): Output port "DRAM_RAS_N" at de1_soc_ps2_demo.v(73) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 73
+Warning (10034): Output port "DRAM_UDQM" at de1_soc_ps2_demo.v(74) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 74
+Warning (10034): Output port "DRAM_WE_N" at de1_soc_ps2_demo.v(75) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 75
+Warning (10034): Output port "FAN_CTRL" at de1_soc_ps2_demo.v(78) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 78
+Warning (10034): Output port "FPGA_I2C_SCLK" at de1_soc_ps2_demo.v(81) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 81
+Warning (10034): Output port "IRDA_TXD" at de1_soc_ps2_demo.v(165) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 165
+Warning (10034): Output port "VGA_CLK" at de1_soc_ps2_demo.v(192) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 192
+Warning (10034): Output port "VGA_HS" at de1_soc_ps2_demo.v(194) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 194
+Warning (10034): Output port "VGA_VS" at de1_soc_ps2_demo.v(198) has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 198
+Info (12128): Elaborating entity "ps2" for hierarchy "ps2:U1" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 242
+Warning (10230): Verilog HDL assignment warning at ps2.v(115): truncated value with size 32 to match size of target (9) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 115
+Warning (10230): Verilog HDL assignment warning at ps2.v(179): truncated value with size 32 to match size of target (8) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 179
+Warning (10230): Verilog HDL assignment warning at ps2.v(186): truncated value with size 32 to match size of target (1) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 186
+Warning (10230): Verilog HDL assignment warning at ps2.v(192): truncated value with size 32 to match size of target (6) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 192
+Warning (10230): Verilog HDL assignment warning at ps2.v(220): truncated value with size 32 to match size of target (4) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 220
+Warning (10230): Verilog HDL assignment warning at ps2.v(236): truncated value with size 32 to match size of target (4) File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 236
+Info (12128): Elaborating entity "SEG7_LUT" for hierarchy "ps2:U1|SEG7_LUT:U1" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/ps2.v Line: 74
+Warning (13039): The following bidirectional pins have no drivers
+    Warning (13040): bidirectional pin "AUD_ADCLRCK" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 46
+    Warning (13040): bidirectional pin "AUD_BCLK" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 47
+    Warning (13040): bidirectional pin "AUD_DACLRCK" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 49
+    Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[2]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[3]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[4]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[5]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[6]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[7]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[8]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[9]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[10]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[11]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[12]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[13]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[14]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 71
+    Warning (13040): bidirectional pin "FPGA_I2C_SDAT" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 82
+    Warning (13040): bidirectional pin "GPIO_0[0]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[1]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[2]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[3]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[4]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[5]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[6]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[7]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[8]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[9]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[10]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[11]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[12]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[13]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[14]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[15]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[16]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[17]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[18]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[19]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[20]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[21]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[22]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[23]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[24]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[25]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[26]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[27]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[28]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[29]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[30]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[31]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[32]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[33]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[34]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_0[35]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 85
+    Warning (13040): bidirectional pin "GPIO_1[0]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[1]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[2]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[3]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[4]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[5]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[6]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[7]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[8]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[9]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[10]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[11]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[12]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[13]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[14]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[15]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[16]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[17]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[18]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[19]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[20]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[21]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[22]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[23]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[24]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[25]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[26]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[27]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[28]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[29]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[30]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[31]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[32]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[33]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[34]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "GPIO_1[35]" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 86
+    Warning (13040): bidirectional pin "PS2_CLK2" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 175
+    Warning (13040): bidirectional pin "PS2_DAT2" has no driver File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 177
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ADC_CONVST" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 39
+    Warning (13410): Pin "ADC_DIN" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 40
+    Warning (13410): Pin "ADC_SCLK" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 42
+    Warning (13410): Pin "AUD_DACDAT" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 48
+    Warning (13410): Pin "AUD_XCK" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 50
+    Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[7]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[8]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[9]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[10]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[11]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_ADDR[12]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 65
+    Warning (13410): Pin "DRAM_BA[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 66
+    Warning (13410): Pin "DRAM_BA[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 66
+    Warning (13410): Pin "DRAM_CAS_N" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 67
+    Warning (13410): Pin "DRAM_CKE" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 68
+    Warning (13410): Pin "DRAM_CLK" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 69
+    Warning (13410): Pin "DRAM_CS_N" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 70
+    Warning (13410): Pin "DRAM_LDQM" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 72
+    Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 73
+    Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 74
+    Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 75
+    Warning (13410): Pin "FAN_CTRL" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 78
+    Warning (13410): Pin "FPGA_I2C_SCLK" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 81
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 102
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 105
+    Warning (13410): Pin "IRDA_TXD" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 165
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 171
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 190
+    Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 191
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 192
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 193
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 194
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 195
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 196
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 198
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 28 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ADC_DOUT" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 41
+    Warning (15610): No output dependent on input pin "AUD_ADCDAT" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 45
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 53
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 56
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 59
+    Warning (15610): No output dependent on input pin "IRDA_RXD" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 164
+    Warning (15610): No output dependent on input pin "KEY[2]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 168
+    Warning (15610): No output dependent on input pin "KEY[3]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 168
+    Warning (15610): No output dependent on input pin "SW[0]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[1]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[2]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[3]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[4]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[5]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[6]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[7]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[8]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "SW[9]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 180
+    Warning (15610): No output dependent on input pin "TD_CLK27" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 183
+    Warning (15610): No output dependent on input pin "TD_DATA[0]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[1]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[2]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[3]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[4]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[5]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[6]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_DATA[7]" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 184
+    Warning (15610): No output dependent on input pin "TD_HS" File: F:/SVN/de1_soc/trunk/cd/CD_HW_revF/Demonstrations/FPGA/DE1_SoC_PS2_DEMO/de1_soc_ps2_demo.v Line: 185
+Info (21057): Implemented 378 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 113 output pins
+    Info (21060): Implemented 96 bidirectional pins
+    Info (21061): Implemented 137 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 242 warnings
+    Info: Peak virtual memory: 875 megabytes
+    Info: Processing ended: Tue Aug 23 16:33:34 2016
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:43
+
+
