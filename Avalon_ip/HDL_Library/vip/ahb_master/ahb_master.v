@@ -6,7 +6,8 @@ module ahb_master (
     hsize,
     hwrite,
     hwdata,
-    hrdata
+    hrdata,
+    hready
 );
     parameter DW = 32;
     parameter AW = 32;
