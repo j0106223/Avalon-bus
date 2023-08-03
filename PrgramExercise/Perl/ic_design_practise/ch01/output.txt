@@ -1,0 +1,5 @@
+command is: ./read_argument_v1.pl
+-a
+first
+-b
+second
