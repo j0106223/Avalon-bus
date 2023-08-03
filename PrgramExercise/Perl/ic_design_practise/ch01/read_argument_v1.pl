@@ -1,9 +1,9 @@
-    #!/usr/bin/perl
+#!/usr/bin/perl
 
-    print "command is: $0\n";
+print "command is: $0\n";
 
-    for my $arg (@ARGV){
-        print $arg, "\n";
-    }
+for my $arg (@ARGV){
+    print $arg, "\n";
+}
 
-    exit 0;
+exit 0;
