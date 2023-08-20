@@ -1,6 +1,6 @@
 `default_nettype none
 //only support single master multi slave arch
-//so scl no need to use open-drain io, but sda does
+//so sda need to use open-drain io, but scl don't
 module i2c_core (
     clk,
     reset_n,
