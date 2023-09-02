@@ -8,8 +8,10 @@ module i2c_core (
     wdata_o,
     sda_i,
     sda_o,
+    scl_i,
     scl_o,
-    done
+    ack,
+    done,
 );
     input clk;
     input reset_n;
@@ -18,18 +20,23 @@ module i2c_core (
     output rdata_valid;
     output wdata_valid;
     input [31:0]clk_div;
+    
+    output ready;
+    input start;
+    input stop;
+    input read;
+    input write;
+    input data;
+    input nack;
+    output ack,
+    output done;
+    //export
     input sda_i;
     output sda_o;
+    output scl_i;
     output scl_o;
-    output ready;
-    output done;
-
     reg sda;
     reg scl;
-    //start
-    //rdata
-    //wdata
-    //stop
     clk_gen i2c_clock_gen(
         .clk_i      (clk),
         .reset_n    (reset_n),
@@ -53,27 +60,46 @@ module i2c_core (
         end
     end
 
-    always @(*) begin
+    always @* begin
         case(state)
             IDLE :begin
-                next_state = ;
+                if(start)begin
+                    next_state = START;
+                end else if(stop)begin
+                    next_state = STOP;
+                end else if(write)begin
+                    next_state = WDATA;
+                end else if(read)begin
+                    next_state = RDATA;
+                end else begin
+                   next_state = IDLE;
+                end
             end
             START:begin
-                next_state = ;
+                if(start_done)begin
+                    next_state = IDLE;
+                end                
             end
             RDATA:begin
-                next_state = ;
+                if(read_done)begin
+                    next_state = IDLE;
+                end
             end
             WDATA:begin
-                next_state = ;
+                if(write_done)begin
+                    next_state = IDLE;
+                end
             end
             STOP:begin
-                next_state = ;
+                if(stop_done)begin
+                    next_state = IDLE;
+                end
+                
             end
             DONE:begin
                 next_state = IDLE;
             end
-            default;
+            default:next_state = IDLE;
         endcase
     end
 
@@ -91,11 +117,41 @@ module i2c_core (
         end
     end
 
-    //rdata shift register
-    always @(posedge scl_o) begin
-        
+    reg [1:0] sda_sync;
+    reg [1:0] scl_sync;
+
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            sda_sync <= 2'b00;
+            scl_sync <= 2'b00;
+        end else begin
+            sda_sync[0] <= sda_i;
+            sda_sync[1] <= sda_sync[0];
+            scl_sync[0] <= scl_i;
+            scl_sync[1] <= scl_sync[0]
+        end
+    end
+    //read shift register
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            sda_sync <= 2'b00;
+            scl_sync <= 2'b00;
+        end else begin
+            sda_sync[0] <= sda_i;
+            sda_sync[1] <= sda_sync[0];
+            scl_sync[0] <= scl_i;
+            scl_sync[1] <= scl_sync[0]
+        end
     end
 
+    reg [31:0] cnt;
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            cnt <= 0;
+        end else begin
+            cnt <= cnt + 1;
+        end
+    end
     //table
 
     always @(*) begin
