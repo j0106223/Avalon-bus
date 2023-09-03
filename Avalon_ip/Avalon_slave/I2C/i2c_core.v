@@ -35,6 +35,10 @@ module i2c_core (
     output sda_o;
     output scl_i;
     output scl_o;
+    assign done = start_done|
+                  read_done |
+                  write_done|
+                  stop_done;
     reg sda;
     reg scl;
     clk_gen i2c_clock_gen(
