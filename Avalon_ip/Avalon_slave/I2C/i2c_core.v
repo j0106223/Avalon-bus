@@ -106,7 +106,8 @@ module i2c_core (
             default:next_state = IDLE;
         endcase
     end
-
+    wire rx_en = (state == RDATA);
+    wire tx_en = (state == WDATA);
     //output logic
     assign ready = (state == IDLE);
 //========================FSM===============================================
@@ -170,5 +171,19 @@ module i2c_core (
             0:sda_o = 0;scl_o = 1;
             1:sda_o = 0;scl_o = 0;
         endcase
+    end
+
+    //rx data
+    reg [7:0]rx_data;
+    always @(posedge clk or negedge reset_n) begin
+        if(!reset_n)begin
+            rx_data <= 8'b0000_0000;
+        end else begin
+            if(rx_en)begin
+                if()begin//scl rising
+                    rx_data<={rx_data[7:1],scl};
+                end
+            end
+        end
     end
 endmodule
