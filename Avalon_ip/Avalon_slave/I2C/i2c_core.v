@@ -159,7 +159,7 @@ module i2c_core (
     end
     //table
 
-    always @(*) begin
+    always @* begin
         case(cnt)
             //start
             0:sda_o = 0;scl_o = 1;
