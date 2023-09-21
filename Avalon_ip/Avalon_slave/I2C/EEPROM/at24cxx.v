@@ -10,9 +10,27 @@ module at24cxx (
     input a0;
     localparam HIGH = 1'b1;
     localparam LOW  = 1'b0;
+    localparam rom_byte_size = 128;
     //start detection circuit
     reg start_detect = scl & ~sda;
     reg stop_detect = scl sda;
+    reg [7:0] eeprom [0:rom_byte_size-1];
+    wire x_dec;
+    wire y_dec;
+    always @(posedge xxx) begin
+        eeprom[x_dec] <= xxx;
+    end
+    wire [7:0] rdata_byte;
+    wire rdata_bit;
+    assign rdata_byte = eeprom[x_dec];
+    assign rdata_bit = rdata_byte[y_dec]
+    //serial mux
+    always @* begin
+        case(y_dec)
+
+        endcase
+    end
+
     always @(posedge sda) begin
         
     end
