@@ -36,4 +36,12 @@ module at24cxx (
             end
         end
     end
+
+    //device address comparator
+    reg [6:0] get_addr;
+    wire addr_compare_success;
+    always @(posedge scl) begin
+        get_addr <= {get_addr[6:1], sda};    
+    end
+    assign addr_compare_success = (addr_compare) & (get_addr == device_id);
 endmodule
