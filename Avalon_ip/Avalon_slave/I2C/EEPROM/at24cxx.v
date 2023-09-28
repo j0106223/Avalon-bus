@@ -14,6 +14,13 @@ module at24cxx (
     //start detection circuit
     reg start_detect = scl & ~sda;
     reg stop_detect = scl sda;
+    
+    always@(posedge sda)begin
+
+    end
+    always@(negedge sda)begin
+
+    end
     reg [7:0] eeprom [0:rom_byte_size-1];
     wire x_dec;
     wire y_dec;
