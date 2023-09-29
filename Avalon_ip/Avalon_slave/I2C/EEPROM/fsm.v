@@ -1,5 +1,8 @@
 module fsm (
-    
+    scl,
+    sda,
+    comp,
+    load_addr_compare,
 );
     input scl;
     input sda;
