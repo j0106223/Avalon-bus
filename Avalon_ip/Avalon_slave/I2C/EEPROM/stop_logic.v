@@ -14,7 +14,9 @@ module stop_logic (
         if(start_detected)begin
             detected <= 1'b0;
         end else begin
-            detected <= 1'b1;
+            if(scl)begin
+                detected <= 1'b1;
+            end
         end
     end
 endmodule
