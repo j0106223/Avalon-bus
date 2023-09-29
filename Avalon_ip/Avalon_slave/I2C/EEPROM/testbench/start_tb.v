@@ -6,6 +6,7 @@ module start_tb;
         $dumpvars(0, start_tb);
     end
     integer seed = 1214;
+    reg clk;
     reg scl;
     reg sda;
     initial begin
@@ -20,13 +21,17 @@ module start_tb;
                    $display("sda = %d",sda);
                    #2;  
                 end
+                sda = 0;
+                #1;
+                sda = 1;
             end
             begin//scl
                 scl = 1;
                 #2;
-                repeat(20)begin
+                repeat(16)begin
                     #1 scl = ~scl;
                 end
+                #3;
             end
         join
         $finish;
