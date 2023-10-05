@@ -9,7 +9,7 @@ module eeprom (
     parameter PAGE_NUM = 32;
     input clk;
     input write;
-    input [PAGE_NUM-1:0] row;
+    input  [4:0] row;
     input  [2:0] col;
 	input  [7:0] data_i;
 	output [7:0] data_o;

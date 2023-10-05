@@ -1,15 +1,14 @@
-module xxx (
-    
+module addr_and_cnt (
+    load,
+    inc,
 );
     input load;
     input inc;
     input  [7:0] addr_i;
     input data;
     output data_word;
-    output [7:0] x_dec;
-    output [2:0] y_dec;
-    assign x_dec = page;
-    assign y_dec = cnt;
+    output [4:0] row;
+    output [2:0] col;
     reg y;
     reg wptr
     //x dec
