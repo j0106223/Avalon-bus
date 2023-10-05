@@ -1,27 +1,35 @@
 module addr_and_cnt (
-    load,
+    scl,
+	sda,
+	addr_load,
     inc,
+
 );
-    input load;
+    input addr_load;
     input inc;
-    input  [7:0] addr_i;
-    input data;
     output data_word;
     output [4:0] row;
     output [2:0] col;
     reg wptr
 	reg [7:0] data_word;
 	reg [7:0] address;
-	reg [2:0] cnt;	
-    always @(posedge inc posedge load) begin
-		if (load) begin
+	reg [2:0] cnt;
+
+
+    reg  [7:0] shift_reg;
+    always @(posedge scl) begin
+    	shift_reg <= {shift_reg[7:1], sda};
+    end
+
+    always @(posedge scl) begin
+		if (addr_load) begin
 			cnt <= 3'b000;
 		end else begin
 			cnt <= cnt + 1'b1;
 		end
     end
 
-	always @(posedge load) begin
+	always @(posedge scl) begin
 		if (rw) begin
 			data_word <= data
 		end else begin
