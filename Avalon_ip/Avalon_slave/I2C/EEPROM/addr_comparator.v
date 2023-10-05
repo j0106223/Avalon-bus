@@ -1,4 +1,4 @@
-module addr_compare (
+module addr_comparator (
     scl,
     sda,
     load,

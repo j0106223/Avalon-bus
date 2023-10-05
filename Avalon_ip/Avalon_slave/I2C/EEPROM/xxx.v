@@ -9,25 +9,7 @@ module addr_and_cnt (
     output data_word;
     output [4:0] row;
     output [2:0] col;
-    reg y;
     reg wptr
-    //x dec
-    assign addr_o = {page, cnt};
-    reg [4:0] page;
-    reg [2:0] cnt;
-    always @(posedge inc or posedge load) begin
-        if(load)begin
-            {page, cnt} <= addr_i; 
-            y <= y + 1'b0;
-        end else begin
-            if(inc)begin
-                cnt <= cnt + 1'b1;
-                y <= y + 1'b0;
-            end else begin
-                y <= y + 1'b1;
-            end
-        end
-    end
 	reg [7:0] data_word;
 	reg [7:0] address;
 	reg [2:0] cnt;	
