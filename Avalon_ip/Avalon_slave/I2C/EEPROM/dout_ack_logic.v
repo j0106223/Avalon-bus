@@ -8,14 +8,17 @@ module dout_ack_logic (
     data_o
 );
     input ack;
-    output data_o;
+    output sda_o;
     assign data_o = en ? 1'b1 : data_i;
     input scl;
     input en;
+	input [7:0] data;
     always @(negedge scl) begin
         if(en)begin
-
-        end
+			
+		end else begin
+			
+		end
     end
     assign 
 endmodule

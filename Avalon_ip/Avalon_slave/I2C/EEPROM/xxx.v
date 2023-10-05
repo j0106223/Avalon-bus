@@ -11,6 +11,7 @@ module xxx (
     assign x_dec = page;
     assign y_dec = cnt;
     reg y;
+    reg wptr
     //x dec
     assign addr_o = {page, cnt};
     reg [4:0] page;
@@ -28,8 +29,22 @@ module xxx (
             end
         end
     end
-
-    always @() begin
-        
+	reg [7:0] data_word;
+	reg [7:0] address;
+	reg [2:0] cnt;	
+    always @(posedge inc posedge load) begin
+		if (load) begin
+			cnt <= 3'b000;
+		end else begin
+			cnt <= cnt + 1'b1;
+		end
     end
+
+	always @(posedge load) begin
+		if (rw) begin
+			data_word <= data
+		end else begin
+			address <= data;
+		end
+	end
 endmodule

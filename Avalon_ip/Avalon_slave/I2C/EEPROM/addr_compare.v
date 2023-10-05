@@ -17,12 +17,26 @@ module addr_compare (
     input a0;
     output comp;
     output rw;
-    reg [6:0]shift_reg;
-    wire [6:0]devicd_id;
+
+
+	reg compare;
+	reg read_write;
+    reg  [7:0] shift_reg;
+
+    wire [6:0] devicd_id;
+	assign rw = read_write;
+	assign comp = compare;
     assign devicd_id = {4'b1000, {a2, a1, a0}};
-    assign comp = (shift_reg == devicd_id) & load;
-    assign rw = shift_reg[0];
+
+
     always @(posedge scl) begin
-        shift_reg <= {shift_reg[6:1],sda};
+    	shift_reg <= {shift_reg[7:1], sda};
     end
+
+	always @(posedge scl) begin
+		if (load) begin
+			compare = (shift_reg[7:1] == device_id);
+			read_write = shift_reg[0];
+		end
+	end
 endmodule

@@ -1,23 +1,25 @@
 module mem_page (
     clk,
     cs,
-    byte_addr,
-    rw,
+    addr,
+    write,
     data_i,
     data_o
 );
+    parameter BYTE_NUM = 8;
     input  [7:0] data_i;
     output [7:0] data_o;
-    input  [2:0] byte_addr;
-    parameter page_size = 8;
-    input cs;//page address selected
-    input clk;//fsm en
-    reg [7:0] mem [0:page_size];
-    assign data_o = mem[byte_addr];
+    input  [2:0] addr;
+    input clk;
+    input cs;
+    input write;
+    reg [7:0] mem [0:BYTE_NUM-1];
+    assign data_o = mem[addr];
     always @(posedge clk) begin
         if(cs)begin
-            mem[byte_addr] <= data_i;;
+	        if (write) begin
+                mem[addr] <= data_i;
+	        end
         end
-    end
-    
+    end    
 endmodule
