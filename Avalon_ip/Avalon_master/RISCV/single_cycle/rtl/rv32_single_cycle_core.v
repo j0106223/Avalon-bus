@@ -1,4 +1,4 @@
-module rv32_single (
+module rv32_single_cycle_core (
     address,
     data,
 );
