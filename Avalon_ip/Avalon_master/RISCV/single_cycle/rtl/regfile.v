@@ -15,7 +15,7 @@ module regfile
     
     integer i;
     always @(posedge clk) begin
-        if (write) begin
+        if (write && (wa != 0)) begin
             regiser[wa] <= wd;
         end
     end

@@ -18,7 +18,7 @@ module tb;
     initial begin
         forever begin
             @(posedge clk);
-            if (DUT.data_memory.mem[xxx] == 7777) begin
+            if (DUT.data_memory.address == 7777) begin
                 $finish;
             end
         end
